@@ -1,0 +1,35 @@
+{
+  "target": "C:\\Users\\Renz\\Documents\\bnpi-sm\\bnpi-sm-api",
+  "targetDisplay": ".",
+  "command": "wwg dev plan --from intake.answers.yaml --format plain",
+  "dryRun": false,
+  "inputsRead": [
+    "intake.answers.yaml",
+    "wwg.project.yaml",
+    "wiki/02-project/project-intake.md"
+  ],
+  "filesCreated": [
+    "wiki/11-synthesis/current-state.md",
+    "wiki/03-requirements/user-stories.md",
+    "wiki/03-requirements/acceptance-criteria.md",
+    "wiki/04-decisions/adr/0002-initial-product-direction.md",
+    "wiki/05-architecture/system-overview.md",
+    "governance/project-readiness-checklist.md"
+  ],
+  "filesUpdated": [],
+  "filesSkipped": [],
+  "openQuestions": [
+    "None for scaffold scope — future domain/auth/database decisions open via feature checklists and Project Truth",
+    "Clarify optional intake question: Do you have brand colors?"
+  ],
+  "readiness": "Ready with open questions",
+  "registryUpdated": true,
+  "github": {
+    "requested": false,
+    "ghAvailable": false,
+    "ghAuthenticated": false,
+    "createdRepo": false,
+    "pushStatus": "not-requested",
+    "errors": []
+  }
+}

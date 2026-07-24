@@ -1,0 +1,573 @@
+version: 1
+generated_by: wwg
+updated_at: 2026-07-20T06:10:37.615Z
+selected_profiles: []
+detected_domains:
+  - business.compliance
+  - business.operations
+  - business.strategy
+  - software.security
+  - software.testing
+  - software.web
+skills:
+  business.business-brief:
+    state: recommended
+    source: bundled
+    class: domain
+    reason: Business, strategy, proposal, stakeholder, or requirements evidence detected.
+    materialization: reference
+    path: null
+    recommended_by:
+      - domain:business.strategy
+      - file:scripts/wwg-brief.mjs
+    enabled_by: null
+    disabled_reason: null
+    last_refreshed: 2026-07-20T06:10:37.615Z
+    evidence:
+      - type: file
+        value: scripts/wwg-brief.mjs
+        strength: strong
+        reason: scripts/wwg-brief.mjs matches *brief*.
+      - type: domain
+        value: business.strategy
+        strength: strong
+        reason: Fintech profile or business, strategy, proposal, stakeholder, or requirements files
+          detected.
+  business.sop-writing:
+    state: recommended
+    source: bundled
+    class: domain
+    reason: SOP, process, operations, runbook, workflow, or approval evidence detected.
+    materialization: reference
+    path: null
+    recommended_by:
+      - domain:business.operations
+      - prompt_keyword:workflow
+    enabled_by: null
+    disabled_reason: null
+    last_refreshed: 2026-07-20T06:10:37.615Z
+    evidence:
+      - type: prompt_keyword
+        value: workflow
+        strength: explicit
+        reason: Current task prompt mentions workflow in .wwg/workspace/current-task.md,
+          workspace/current-task.md.
+      - type: domain
+        value: business.operations
+        strength: strong
+        reason: Internal-tool profile or operations, SOP, process, runbook, workflow, approval, or policy
+          files detected.
+      - type: domain
+        value: business.operations
+        strength: explicit
+        reason: Current task prompt mentions workflow in .wwg/workspace/current-task.md,
+          workspace/current-task.md.
+  core.change-classifier:
+    state: enabled
+    source: bundled
+    class: core
+    reason: Core WWG change classification behavior.
+    materialization: copied
+    path: .wwg/workspace/skills/change-classifier.skill.md
+    recommended_by:
+      - core
+      - compatibility
+    enabled_by: wwg
+    disabled_reason: null
+    last_refreshed: 2026-07-20T06:10:37.615Z
+    evidence:
+      - type: compatibility
+        value: change-classifier
+        strength: explicit
+        reason: Legacy copied Workspace skill file is physically present.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: keep_copied
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: copied
+  core.context-skill-maintenance:
+    state: enabled
+    source: bundled
+    class: core
+    reason: Core WWG context and skill synchronization behavior.
+    materialization: copied
+    path: .wwg/workspace/skills/context-skill-maintenance.skill.md
+    recommended_by:
+      - core
+      - compatibility
+    enabled_by: wwg
+    disabled_reason: null
+    last_refreshed: 2026-07-20T06:10:37.615Z
+    evidence:
+      - type: compatibility
+        value: context-skill-maintenance
+        strength: explicit
+        reason: Legacy copied Workspace skill file is physically present.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: keep_copied
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: copied
+  core.drift-detector:
+    state: enabled
+    source: bundled
+    class: core
+    reason: Core WWG drift detection behavior.
+    materialization: copied
+    path: .wwg/workspace/skills/drift-detector.skill.md
+    recommended_by:
+      - core
+      - compatibility
+    enabled_by: wwg
+    disabled_reason: null
+    last_refreshed: 2026-07-20T06:10:37.615Z
+    evidence:
+      - type: compatibility
+        value: drift-detector
+        strength: explicit
+        reason: Legacy copied Workspace skill file is physically present.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: keep_copied
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: copied
+  core.regression-guardrail-maintenance:
+    state: enabled
+    source: bundled
+    class: core
+    reason: Core WWG regression guardrail behavior.
+    materialization: copied
+    path: .wwg/workspace/skills/regression-guardrail-maintenance.skill.md
+    recommended_by:
+      - core
+      - compatibility
+    enabled_by: wwg
+    disabled_reason: null
+    last_refreshed: 2026-07-20T06:10:37.615Z
+    evidence:
+      - type: compatibility
+        value: regression-guardrail-maintenance
+        strength: explicit
+        reason: Legacy copied Workspace skill file is physically present.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: keep_copied
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: copied
+  core.task-router:
+    state: enabled
+    source: bundled
+    class: core
+    reason: Core WWG task routing behavior.
+    materialization: copied
+    path: .wwg/workspace/skills/task-router.skill.md
+    recommended_by:
+      - core
+      - compatibility
+    enabled_by: wwg
+    disabled_reason: null
+    last_refreshed: 2026-07-20T06:10:37.615Z
+    evidence:
+      - type: compatibility
+        value: task-router
+        strength: explicit
+        reason: Legacy copied Workspace skill file is physically present.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: keep_copied
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: copied
+  core.truth-loop:
+    state: enabled
+    source: bundled
+    class: core
+    reason: Core WWG governance behavior.
+    materialization: reference
+    path: null
+    recommended_by:
+      - core
+    enabled_by: wwg
+    disabled_reason: null
+    last_refreshed: 2026-07-20T06:10:37.615Z
+    evidence:
+      - type: governance
+        value: core
+        strength: explicit
+        reason: Core WWG governance behavior.
+  public.public-discovery-maintenance:
+    state: recommended
+    source: bundled
+    class: domain
+    reason: Public surface or discovery evidence suggests this skill may help.
+    materialization: reference
+    path: null
+    recommended_by:
+      - file:public/favicon.svg
+      - file:public/icons.svg
+    enabled_by: null
+    disabled_reason: null
+    last_refreshed: 2026-07-20T06:10:37.615Z
+    evidence:
+      - type: file
+        value: public/favicon.svg
+        strength: strong
+        reason: public/favicon.svg matches public/**.
+      - type: file
+        value: public/icons.svg
+        strength: strong
+        reason: public/icons.svg matches public/**.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: future_reference_only
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: reference
+  public.public-surface-update:
+    state: recommended
+    source: bundled
+    class: domain
+    reason: Public or customer-facing communication evidence suggests this skill may help.
+    materialization: reference
+    path: null
+    recommended_by:
+      - file:.wwg/governance/README.md
+      - file:.wwg/reports/README.md
+      - file:.wwg/wiki/principles/README.md
+      - file:README.md
+      - file:docs/AI_WORKFLOW.md
+      - file:e2e/README.md
+      - file:public/favicon.svg
+      - file:public/icons.svg
+    enabled_by: null
+    disabled_reason: null
+    last_refreshed: 2026-07-20T06:10:37.615Z
+    evidence:
+      - type: file
+        value: docs/AI_WORKFLOW.md
+        strength: strong
+        reason: docs/AI_WORKFLOW.md matches docs/**.
+      - type: file
+        value: public/favicon.svg
+        strength: strong
+        reason: public/favicon.svg matches public/**.
+      - type: file
+        value: public/icons.svg
+        strength: strong
+        reason: public/icons.svg matches public/**.
+      - type: file
+        value: README.md
+        strength: strong
+        reason: README.md matches README.md.
+      - type: file
+        value: e2e/README.md
+        strength: strong
+        reason: e2e/README.md matches README.md.
+      - type: file
+        value: .wwg/governance/README.md
+        strength: strong
+        reason: .wwg/governance/README.md matches README.md.
+      - type: file
+        value: .wwg/reports/README.md
+        strength: strong
+        reason: .wwg/reports/README.md matches README.md.
+      - type: file
+        value: .wwg/wiki/principles/README.md
+        strength: strong
+        reason: .wwg/wiki/principles/README.md matches README.md.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: future_reference_only
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: reference
+  software.bug-fix:
+    state: recommended
+    source: bundled
+    class: domain
+    reason: Software, testing, bug, or incident evidence suggests this skill may help.
+    materialization: reference
+    path: null
+    recommended_by:
+      - dependency:vitest
+      - domain:software.testing
+      - file:e2e/features/_template/feature.spec.ts
+      - file:e2e/features/home/home.spec.ts
+      - file:e2e/features/shell/navigation.spec.ts
+      - file:package.json
+      - file:src/components/atoms/Button/Button.test.tsx
+      - file:src/config/routes.config.test.ts
+      - file:src/lib/cn.test.ts
+    enabled_by: null
+    disabled_reason: null
+    last_refreshed: 2026-07-20T06:10:37.615Z
+    evidence:
+      - type: dependency
+        value: vitest
+        strength: strong
+        reason: package.json contains vitest.
+      - type: file
+        value: package.json
+        strength: strong
+        reason: package.json matches package.json.
+      - type: file
+        value: src/config/routes.config.test.ts
+        strength: strong
+        reason: src/config/routes.config.test.ts matches **/*.test.*.
+      - type: file
+        value: src/lib/cn.test.ts
+        strength: strong
+        reason: src/lib/cn.test.ts matches **/*.test.*.
+      - type: file
+        value: src/components/atoms/Button/Button.test.tsx
+        strength: strong
+        reason: src/components/atoms/Button/Button.test.tsx matches **/*.test.*.
+      - type: file
+        value: e2e/features/home/home.spec.ts
+        strength: strong
+        reason: e2e/features/home/home.spec.ts matches **/*.spec.*.
+      - type: file
+        value: e2e/features/shell/navigation.spec.ts
+        strength: strong
+        reason: e2e/features/shell/navigation.spec.ts matches **/*.spec.*.
+      - type: file
+        value: e2e/features/_template/feature.spec.ts
+        strength: strong
+        reason: e2e/features/_template/feature.spec.ts matches **/*.spec.*.
+      - type: domain
+        value: software.testing
+        strength: strong
+        reason: Test files or test framework dependencies detected.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: future_reference_only
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: reference
+  software.feature-implementation:
+    state: recommended
+    source: bundled
+    class: domain
+    reason: Software project or implementation task evidence suggests this skill may help.
+    materialization: reference
+    path: null
+    recommended_by:
+      - dependency:react
+      - dependency:typescript
+      - dependency:vite
+      - file:package.json
+      - file:src/app/App.tsx
+      - file:src/app/providers.tsx
+      - file:src/app/router.tsx
+      - file:src/main.tsx
+      - file:src/vite-env.d.ts
+    enabled_by: null
+    disabled_reason: null
+    last_refreshed: 2026-07-20T06:10:37.615Z
+    evidence:
+      - type: dependency
+        value: react
+        strength: strong
+        reason: package.json contains react.
+      - type: dependency
+        value: typescript
+        strength: strong
+        reason: package.json contains typescript.
+      - type: dependency
+        value: vite
+        strength: strong
+        reason: package.json contains vite.
+      - type: file
+        value: package.json
+        strength: strong
+        reason: package.json matches package.json.
+      - type: file
+        value: src/main.tsx
+        strength: strong
+        reason: src/main.tsx matches src/**.
+      - type: file
+        value: src/vite-env.d.ts
+        strength: strong
+        reason: src/vite-env.d.ts matches src/**.
+      - type: file
+        value: src/app/App.tsx
+        strength: strong
+        reason: src/app/App.tsx matches src/**.
+      - type: file
+        value: src/app/providers.tsx
+        strength: strong
+        reason: src/app/providers.tsx matches src/**.
+      - type: file
+        value: src/app/router.tsx
+        strength: strong
+        reason: src/app/router.tsx matches src/**.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: future_reference_only
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: reference
+  software.runtime-infrastructure:
+    state: recommended
+    source: bundled
+    class: domain
+    reason: Runtime, deployment, or infrastructure evidence suggests this skill may help.
+    materialization: reference
+    path: null
+    recommended_by:
+      - file:.env.example
+    enabled_by: null
+    disabled_reason: null
+    last_refreshed: 2026-07-20T06:10:37.615Z
+    evidence:
+      - type: file
+        value: .env.example
+        strength: strong
+        reason: .env.example matches .env.example.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: future_reference_only
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: reference
+  software.web.component-architecture:
+    state: recommended
+    source: bundled
+    class: domain
+    reason: Component or UI architecture evidence detected.
+    materialization: reference
+    path: null
+    recommended_by:
+      - dependency:react
+      - domain:software.web
+      - file:src/components/atoms/index.ts
+      - file:src/components/index.ts
+      - file:src/components/molecules/index.ts
+      - file:src/components/organisms/index.ts
+      - file:src/components/templates/index.ts
+      - file_extension:.tsx
+    enabled_by: null
+    disabled_reason: null
+    last_refreshed: 2026-07-20T06:10:37.615Z
+    evidence:
+      - type: dependency
+        value: react
+        strength: strong
+        reason: package.json contains react.
+      - type: file_extension
+        value: .tsx
+        strength: strong
+        reason: .TSX files are present.
+      - type: file_extension
+        value: .tsx
+        strength: strong
+        reason: .TSX files are present.
+      - type: file_extension
+        value: .tsx
+        strength: strong
+        reason: .TSX files are present.
+      - type: file_extension
+        value: .tsx
+        strength: strong
+        reason: .TSX files are present.
+      - type: file_extension
+        value: .tsx
+        strength: strong
+        reason: .TSX files are present.
+      - type: file
+        value: src/components/index.ts
+        strength: strong
+        reason: src/components/index.ts matches src/components/**.
+      - type: file
+        value: src/components/atoms/index.ts
+        strength: strong
+        reason: src/components/atoms/index.ts matches src/components/**.
+      - type: file
+        value: src/components/molecules/index.ts
+        strength: strong
+        reason: src/components/molecules/index.ts matches src/components/**.
+      - type: file
+        value: src/components/templates/index.ts
+        strength: strong
+        reason: src/components/templates/index.ts matches src/components/**.
+      - type: file
+        value: src/components/organisms/index.ts
+        strength: strong
+        reason: src/components/organisms/index.ts matches src/components/**.
+      - &a1
+        type: domain
+        value: software.web
+        strength: strong
+        reason: Repository contains package.json or JavaScript/TypeScript source files.
+      - &a2
+        type: domain
+        value: software.web
+        strength: strong
+        reason: Repository contains web source files.
+      - &a3
+        type: domain
+        value: software.web
+        strength: strong
+        reason: Frontend framework dependency or JSX/TSX files detected.
+  software.web.react-patterns:
+    state: recommended
+    source: bundled
+    class: domain
+    reason: React project evidence detected.
+    materialization: reference
+    path: null
+    recommended_by:
+      - dependency:react
+      - domain:software.web
+      - file:vite.config.ts
+      - file_extension:.tsx
+    enabled_by: null
+    disabled_reason: null
+    last_refreshed: 2026-07-20T06:10:37.615Z
+    evidence:
+      - type: dependency
+        value: react
+        strength: strong
+        reason: package.json contains react.
+      - type: file_extension
+        value: .tsx
+        strength: strong
+        reason: .TSX files are present.
+      - type: file_extension
+        value: .tsx
+        strength: strong
+        reason: .TSX files are present.
+      - type: file_extension
+        value: .tsx
+        strength: strong
+        reason: .TSX files are present.
+      - type: file_extension
+        value: .tsx
+        strength: strong
+        reason: .TSX files are present.
+      - type: file_extension
+        value: .tsx
+        strength: strong
+        reason: .TSX files are present.
+      - type: file
+        value: vite.config.ts
+        strength: strong
+        reason: vite.config.ts matches vite.config.*.
+      - *a1
+      - *a2
+      - *a3
+local_skills: {}

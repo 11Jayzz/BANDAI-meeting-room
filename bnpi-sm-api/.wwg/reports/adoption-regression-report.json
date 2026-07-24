@@ -1,0 +1,581 @@
+{
+  "schemaVersion": 1,
+  "kind": "wwg.adoption.regressionBaseline",
+  "target": ".",
+  "generatedAt": "2026-07-20T07:19:27.418Z",
+  "mode": "infer",
+  "projectClassification": {
+    "type": "technical",
+    "confidence": "high",
+    "reasons": [
+      "Package metadata was detected.",
+      "Executable source files were detected.",
+      "Project structure artifacts were detected."
+    ]
+  },
+  "testFrameworks": [
+    {
+      "name": "jest",
+      "confidence": "high",
+      "evidence": [
+        "package.json: @types/jest",
+        "package.json: jest",
+        "package.json script test",
+        "package.json script test:watch",
+        "jest.config.js"
+      ]
+    }
+  ],
+  "testCommands": [
+    {
+      "name": "typecheck",
+      "command": "tsc --noEmit",
+      "source": "package.json",
+      "confidence": "medium"
+    },
+    {
+      "name": "test",
+      "command": "jest --runInBand --passWithNoTests=false",
+      "source": "package.json",
+      "confidence": "high"
+    },
+    {
+      "name": "test:watch",
+      "command": "jest --watch",
+      "source": "package.json",
+      "confidence": "high"
+    },
+    {
+      "name": "check",
+      "command": "npm run typecheck && npm run test && npm run build && npm run wwg:validate",
+      "source": "package.json",
+      "confidence": "medium"
+    }
+  ],
+  "existingTests": [
+    {
+      "path": "tests/api.test.ts",
+      "kind": "integration",
+      "confidence": "medium"
+    },
+    {
+      "path": "tests/cache.test.ts",
+      "kind": "unit",
+      "confidence": "medium"
+    },
+    {
+      "path": "tests/env.schema.test.ts",
+      "kind": "unit",
+      "confidence": "medium"
+    },
+    {
+      "path": "tests/setup-env.js",
+      "kind": "unit",
+      "confidence": "medium"
+    }
+  ],
+  "sourceInventory": [
+    {
+      "path": "app.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "config/constants.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "config/cors.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "config/env.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "config/redis.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "config/swagger.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "helper/cache.ts",
+      "kind": "service",
+      "confidence": "medium"
+    },
+    {
+      "path": "jest.config.js",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "middleware/errorHandler.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "middleware/notFound.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "middleware/validateRequest.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "modules/health/health.controller.ts",
+      "kind": "api",
+      "confidence": "medium"
+    },
+    {
+      "path": "modules/health/health.routes.ts",
+      "kind": "api",
+      "confidence": "medium"
+    },
+    {
+      "path": "schema/env.ts",
+      "kind": "data",
+      "confidence": "medium"
+    },
+    {
+      "path": "scripts/new-feature.mjs",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "scripts/wwg-brief.mjs",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "scripts/wwg-intake.mjs",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "server.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "utils/logger.ts",
+      "kind": "service",
+      "confidence": "medium"
+    }
+  ],
+  "documentationInventory": [
+    {
+      "path": "README.md",
+      "kind": "documentation",
+      "confidence": "medium"
+    }
+  ],
+  "criticalBehaviors": [
+    {
+      "name": "Core feature workflow",
+      "source": "docs",
+      "evidence": [
+        "README.md: README headings or route files"
+      ],
+      "criticality": "high",
+      "confidence": "medium"
+    },
+    {
+      "name": "Main entry point behavior",
+      "source": "code",
+      "evidence": [
+        "dist/server.js: entry point candidate",
+        "app.ts: entry point candidate",
+        "server.ts: entry point candidate"
+      ],
+      "criticality": "high",
+      "confidence": "high"
+    },
+    {
+      "name": "Runtime/build behavior",
+      "source": "scripts",
+      "evidence": [
+        "package.json: scripts"
+      ],
+      "criticality": "medium",
+      "confidence": "high"
+    },
+    {
+      "name": "Data persistence behavior",
+      "source": "code",
+      "evidence": [
+        "ioredis: persistence indicator"
+      ],
+      "criticality": "critical",
+      "confidence": "high"
+    },
+    {
+      "name": "Auth and permission behavior",
+      "source": "code",
+      "evidence": [
+        "middleware/errorHandler.ts: auth/security indicator"
+      ],
+      "criticality": "critical",
+      "confidence": "high"
+    },
+    {
+      "name": "Payment behavior",
+      "source": "code",
+      "evidence": [
+        ".husky/_/post-checkout: payments/billing indicator"
+      ],
+      "criticality": "critical",
+      "confidence": "high"
+    },
+    {
+      "name": "Deployment/runtime readiness",
+      "source": "config",
+      "evidence": [
+        "Dockerfile: deployment config",
+        "docker-compose.yml: deployment config"
+      ],
+      "criticality": "medium",
+      "confidence": "high"
+    },
+    {
+      "name": "Configuration and environment behavior",
+      "source": "config",
+      "evidence": [
+        "Dockerfile",
+        "docker-compose.yml",
+        "jest.config.js",
+        "package.json",
+        "tsconfig.json"
+      ],
+      "criticality": "medium",
+      "confidence": "medium"
+    }
+  ],
+  "uncoveredBehaviors": [
+    {
+      "name": "Core feature workflow",
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "criticality": "high",
+      "confidence": "medium"
+    },
+    {
+      "name": "Main entry point behavior",
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "criticality": "high",
+      "confidence": "high"
+    },
+    {
+      "name": "Runtime/build behavior",
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "criticality": "medium",
+      "confidence": "high"
+    },
+    {
+      "name": "Data persistence behavior",
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "criticality": "critical",
+      "confidence": "high"
+    },
+    {
+      "name": "Auth and permission behavior",
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "criticality": "critical",
+      "confidence": "high"
+    },
+    {
+      "name": "Payment behavior",
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "criticality": "critical",
+      "confidence": "high"
+    },
+    {
+      "name": "Deployment/runtime readiness",
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "criticality": "medium",
+      "confidence": "high"
+    },
+    {
+      "name": "Configuration and environment behavior",
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "criticality": "medium",
+      "confidence": "medium"
+    }
+  ],
+  "regressionGaps": [
+    {
+      "name": "Uncovered behavior: Core feature workflow",
+      "severity": "high",
+      "blocking": false,
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "recommendedAction": "Map this behavior to a report-first candidate before generating or editing executable tests."
+    },
+    {
+      "name": "Uncovered behavior: Main entry point behavior",
+      "severity": "high",
+      "blocking": false,
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "recommendedAction": "Map this behavior to a report-first candidate before generating or editing executable tests."
+    },
+    {
+      "name": "Uncovered behavior: Runtime/build behavior",
+      "severity": "medium",
+      "blocking": false,
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "recommendedAction": "Map this behavior to a report-first candidate before generating or editing executable tests."
+    },
+    {
+      "name": "Uncovered behavior: Data persistence behavior",
+      "severity": "critical",
+      "blocking": false,
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "recommendedAction": "Map this behavior to a report-first candidate before generating or editing executable tests."
+    },
+    {
+      "name": "Uncovered behavior: Auth and permission behavior",
+      "severity": "critical",
+      "blocking": false,
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "recommendedAction": "Map this behavior to a report-first candidate before generating or editing executable tests."
+    },
+    {
+      "name": "Uncovered behavior: Payment behavior",
+      "severity": "critical",
+      "blocking": false,
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "recommendedAction": "Map this behavior to a report-first candidate before generating or editing executable tests."
+    },
+    {
+      "name": "Uncovered behavior: Deployment/runtime readiness",
+      "severity": "medium",
+      "blocking": false,
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "recommendedAction": "Map this behavior to a report-first candidate before generating or editing executable tests."
+    },
+    {
+      "name": "Uncovered behavior: Configuration and environment behavior",
+      "severity": "medium",
+      "blocking": false,
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "recommendedAction": "Map this behavior to a report-first candidate before generating or editing executable tests."
+    }
+  ],
+  "safeTestCandidates": [
+    {
+      "name": "Smoke test candidate",
+      "type": "technical",
+      "mode": "report-first",
+      "target": ".",
+      "sourceEvidence": [
+        "app.ts",
+        "config/constants.ts",
+        "config/cors.ts",
+        "config/env.ts",
+        "config/redis.ts"
+      ],
+      "inferredBehavior": "Confirm the application or package starts/builds at a minimal baseline.",
+      "proposedCheckType": "smoke",
+      "classification": "advisory",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Identify the smallest safe smoke check before writing executable tests."
+    },
+    {
+      "name": "Auth/permission test candidate",
+      "type": "technical",
+      "mode": "report-first",
+      "target": "auth",
+      "sourceEvidence": [
+        "middleware/errorHandler.ts: auth/security indicator"
+      ],
+      "inferredBehavior": "Confirm access control and failure paths.",
+      "proposedCheckType": "auth-permission",
+      "classification": "blocking",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Review auth boundaries before generating executable tests."
+    },
+    {
+      "name": "Payment failure-path test candidate",
+      "type": "technical",
+      "mode": "report-first",
+      "target": "payments",
+      "sourceEvidence": [
+        ".husky/_/post-checkout: payments/billing indicator"
+      ],
+      "inferredBehavior": "Confirm payment safe and failure states.",
+      "proposedCheckType": "failure-path",
+      "classification": "blocking",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Keep this report-first until production/payment boundaries are confirmed."
+    },
+    {
+      "name": "Persistence/migration check candidate",
+      "type": "technical",
+      "mode": "report-first",
+      "target": "data",
+      "sourceEvidence": [
+        "ioredis: persistence indicator"
+      ],
+      "inferredBehavior": "Confirm stored data, migrations, and invalid data behavior.",
+      "proposedCheckType": "persistence",
+      "classification": "blocking",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Confirm data ownership before creating executable tests."
+    },
+    {
+      "name": "Configuration contract check candidate",
+      "type": "technical",
+      "mode": "report-first",
+      "target": "config",
+      "sourceEvidence": [
+        "Dockerfile",
+        "docker-compose.yml",
+        "jest.config.js",
+        "package.json",
+        "tsconfig.json"
+      ],
+      "inferredBehavior": "Confirm required config files and safe defaults.",
+      "proposedCheckType": "configuration",
+      "classification": "advisory",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Convert known-safe config expectations into checks later."
+    },
+    {
+      "name": "Schema/contract test candidate",
+      "type": "technical",
+      "mode": "report-first",
+      "target": "contracts",
+      "sourceEvidence": [
+        "app.ts",
+        "config/constants.ts",
+        "config/cors.ts",
+        "config/env.ts",
+        "config/redis.ts"
+      ],
+      "inferredBehavior": "Confirm data contracts, config contracts, or public interfaces do not drift.",
+      "proposedCheckType": "schema-contract",
+      "classification": "advisory",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Identify actual schemas/contracts before generating tests."
+    },
+    {
+      "name": "Core feature workflow regression candidate",
+      "type": "technical",
+      "mode": "report-first",
+      "target": "Core feature workflow",
+      "sourceEvidence": [
+        "Detected tests do not obviously map to this behavior by path/name."
+      ],
+      "inferredBehavior": "Confirm core feature workflow remains covered as the project changes.",
+      "proposedCheckType": "critical-workflow",
+      "classification": "blocking",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Map this candidate to concrete evidence before generating executable tests."
+    },
+    {
+      "name": "Main entry point behavior regression candidate",
+      "type": "technical",
+      "mode": "report-first",
+      "target": "Main entry point behavior",
+      "sourceEvidence": [
+        "Detected tests do not obviously map to this behavior by path/name."
+      ],
+      "inferredBehavior": "Confirm main entry point behavior remains covered as the project changes.",
+      "proposedCheckType": "critical-workflow",
+      "classification": "blocking",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Map this candidate to concrete evidence before generating executable tests."
+    },
+    {
+      "name": "Runtime/build behavior regression candidate",
+      "type": "technical",
+      "mode": "report-first",
+      "target": "Runtime/build behavior",
+      "sourceEvidence": [
+        "Detected tests do not obviously map to this behavior by path/name."
+      ],
+      "inferredBehavior": "Confirm runtime/build behavior remains covered as the project changes.",
+      "proposedCheckType": "critical-workflow",
+      "classification": "advisory",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Map this candidate to concrete evidence before generating executable tests."
+    },
+    {
+      "name": "Data persistence behavior regression candidate",
+      "type": "technical",
+      "mode": "report-first",
+      "target": "Data persistence behavior",
+      "sourceEvidence": [
+        "Detected tests do not obviously map to this behavior by path/name."
+      ],
+      "inferredBehavior": "Confirm data persistence behavior remains covered as the project changes.",
+      "proposedCheckType": "critical-workflow",
+      "classification": "blocking",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Map this candidate to concrete evidence before generating executable tests."
+    },
+    {
+      "name": "Auth and permission behavior regression candidate",
+      "type": "technical",
+      "mode": "report-first",
+      "target": "Auth and permission behavior",
+      "sourceEvidence": [
+        "Detected tests do not obviously map to this behavior by path/name."
+      ],
+      "inferredBehavior": "Confirm auth and permission behavior remains covered as the project changes.",
+      "proposedCheckType": "critical-workflow",
+      "classification": "blocking",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Map this candidate to concrete evidence before generating executable tests."
+    }
+  ],
+  "verificationPaths": {
+    "technical": [
+      "Run detected command(s): typecheck: tsc --noEmit; test: jest --runInBand --passWithNoTests=false; test:watch: jest --watch; check: npm run typecheck && npm run test && npm run build && npm run wwg:validate",
+      "Map detected tests to critical behaviors.",
+      "Prioritize critical workflows, failure paths, configuration, schema/contract, auth, persistence, and deployment checks where applicable."
+    ],
+    "nonTechnical": [],
+    "mixed": []
+  },
+  "ciReadiness": {
+    "status": "partial",
+    "reasons": [
+      "Some test/check evidence exists, but readiness gaps remain."
+    ],
+    "strictBlockingReasons": [
+      "5 high/critical behavior(s) are not mapped to detected tests."
+    ]
+  },
+  "recommendedNextActions": [
+    "Review this baseline before claiming regression readiness.",
+    "Confirm critical behavior inventory with the project owner.",
+    "Treat missing tests/checks as a readiness backlog, not an adoption failure.",
+    "Choose the project test framework and command before generating executable tests.",
+    "Use a later maintain/status/CI pass to refresh or enforce this baseline."
+  ],
+  "safetyNotes": [
+    "Adoption may complete even when regression readiness is poor.",
+    "Missing tests are a regression readiness gap, not an adoption failure.",
+    "No executable tests were generated in this pass.",
+    "Existing source tests were not modified.",
+    "All safe test candidates are report-first and require human or agent review before executable tests are created."
+  ]
+}

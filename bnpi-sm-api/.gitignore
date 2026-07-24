@@ -1,0 +1,14 @@
+node_modules
+dist
+coverage
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.terraform
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+.wwg/reports/backups/

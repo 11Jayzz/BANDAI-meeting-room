@@ -1,0 +1,13 @@
+{
+  "title": "Daily Room Schedule",
+  "subtitle": "Live room availability — no sign-in required.",
+  "occupied": "Occupied",
+  "vacant": "Vacant",
+  "occupiedUntil": "Occupied until {{time}}",
+  "nextBookingAt": "Next booking at {{time}}",
+  "availableAllDay": "Available all day",
+  "noMoreBookingsToday": "No more bookings today",
+  "legendOccupied": "Occupied",
+  "legendVacant": "Vacant",
+  "navLabel": "Public Calendar"
+}

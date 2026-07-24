@@ -1,0 +1,43 @@
+{
+  "target": "C:\\Users\\Renz\\Documents\\bnpi-sm\\bnpi-sm-api",
+  "targetDisplay": ".",
+  "command": "wwg dev intake --from intake.answers.yaml --non-interactive --format plain",
+  "dryRun": false,
+  "mode": "from-file",
+  "profiles": [],
+  "questionsAsked": 42,
+  "answersCaptured": 48,
+  "filesCreated": [
+    "wiki/00-inbox/intake-session.md",
+    "wiki/02-project/project-intake.md",
+    "wiki/02-project/project-brief.md",
+    "wiki/02-project/product-vision.md",
+    "wiki/02-project/target-users.md",
+    "wiki/03-requirements/questionnaire.md",
+    "wiki/03-requirements/functional-requirements.md",
+    "wiki/03-requirements/non-functional-requirements.md",
+    "wiki/07-ux/screens.md",
+    "wiki/07-ux/design-principles.md",
+    "wiki/05-architecture/deployment-model.md",
+    "wiki/11-synthesis/planning-summary.md",
+    "wiki/11-synthesis/open-questions.md"
+  ],
+  "filesUpdated": [
+    "intake.answers.yaml"
+  ],
+  "filesSkipped": [],
+  "registryUpdated": true,
+  "missingRequiredAnswers": [],
+  "openQuestions": [
+    "None for scaffold scope — future domain/auth/database decisions open via feature checklists and Project Truth",
+    "Clarify optional intake question: Do you have brand colors?"
+  ],
+  "github": {
+    "requested": false,
+    "ghAvailable": false,
+    "ghAuthenticated": false,
+    "createdRepo": false,
+    "pushStatus": "not-requested",
+    "errors": []
+  }
+}

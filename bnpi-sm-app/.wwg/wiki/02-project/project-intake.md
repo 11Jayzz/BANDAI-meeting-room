@@ -1,0 +1,86 @@
+# Project Intake
+
+## Purpose
+
+Capture structured answers from WWG intake before Workspace and Governance generation.
+
+## Intake Summary
+
+<!-- WWG_GENERATED:INTAKE_SUMMARY:START -->
+- Project: BNPI SM
+- Summary: Senior-level React + Vite + TypeScript frontend template with Atomic Design, centralized config, localization-ready copy, Tailwind design tokens, Vitest unit tests, Playwright feature E2E, and mandatory WWG-governed multi-agent workflows.
+- Problem: Teams need a standardized, agent-ready frontend foundation so new features are built with consistent componentization, i18n-ready constants, tests, and documented truth instead of ad-hoc structure.
+- Owner: BNPI SM project team
+- Status: prototype
+- Profiles: None selected
+<!-- WWG_GENERATED:INTAKE_SUMMARY:END -->
+
+## Key Answers
+
+<!-- WWG_GENERATED:KEY_ANSWERS:START -->
+- app_name: BNPI SM
+- app_summary: Senior-level React + Vite + TypeScript frontend template with Atomic Design, centralized config, localization-ready copy, Tailwind design tokens, Vitest unit tests, Playwright feature E2E, and mandatory WWG-governed multi-agent workflows.
+
+- problem: Teams need a standardized, agent-ready frontend foundation so new features are built with consistent componentization, i18n-ready constants, tests, and documented truth instead of ad-hoc structure.
+
+- owner: BNPI SM project team
+- status: prototype
+- users: Developers implementing features on the template, AI coding agents (generic, grok, claude-code, codex, cursor, kimi, etc.), End users of the SPA once domain features ship
+- roles: developer/implementer, end-user (future domain), ai-agent (any tool; must follow AGENTS.md)
+- admin: Template phase: no product admin UI. Project owner / engineering lead owns repo governance, production approval, and WWG truth acceptance. Future product admin role is NEEDS_CONFIRMATION.
+
+- audience_type: internal users, guests
+- core_features: Atomic Design component system (atoms through pages), Centralized src/config for non-copy constants, i18next localization foundation (src/locales), Tailwind v4 design tokens, Vitest unit tests, Playwright E2E per feature module, WWG Wiki/Workspace/Governance for all AI agents, feature:new auto-scaffold for feature checklists
+- mvp_features: Runnable SPA shell with home page, Atomic component vertical slice, Config + i18n foundations, Unit + E2E home/shell coverage, WWG adoption + multi-agent operating contract, feature:new checklist automation
+- deferred_features: Domain business modules (product-specific features), Backend API client + React Query, Authentication / protected routes, Storybook atomic catalog, Additional locales beyond English foundation, CI pipeline packaging (lint/typecheck/test/e2e/wwg), Payments, billing, admin product console
+- replaced_workflows: None — greenfield template; does not replace an existing production app yet
+- screen_count: 1
+- pages: Home (/)
+- public_pages: Home (/) — entire SPA shell is public until auth is intentionally added
+- login_pages: None in template scope — no login required for any current route
+- admin_pages: None in template scope — no admin-only routes until product admin is designed
+- data_needs: None in SPA shell (no persistence layer in-repo), [object Object]
+- integrations: None required for MVP shell, [object Object]
+- file_uploads: false
+- notifications: false
+- payments: false
+- hosting: Not finalized (NEEDS_CONFIRMATION). Local Vite dev/preview for now; static hosting of dist/ is sufficient for SPA shell.
+
+- frontend: React 19 + Vite 8 + TypeScript + Tailwind CSS v4 + React Router + i18next
+- backend: None in this repository (frontend shell only)
+- database: None in this repository
+- background_jobs: false
+- design_style: Clean enterprise-ready admin/dashboard-friendly UI with design tokens
+- brand_colors: brand blue scale (tokens in src/styles/tokens.css)
+- logo_assets: Public favicon only; full brand kit TBD
+- design_tone: enterprise minimalist
+- inspiration: Modern design-system SPAs with atomic components, Localization-first product shells
+- governance_level: standard
+- compliance_concerns: No regulated data in template shell, Future auth/PII/payments require approval-gated work
+- production_approver: Project owner / engineering lead
+- approval_gated_actions: Auth / authorization product implementation, Payments or billing, Production deploy / secrets, Data deletion or destructive migrations (if backend added), Publishing releases or public announcements
+- primary_agent: cursor
+- multiple_agents: true
+- agent_restrictions: All agents must follow AGENTS.md and WWG loop, All agents must run feature:new for meaningful features, No agent is exempt because of brand (Claude, Codex, Grok, Cursor, etc.)
+- secondary_agents: grok, claude-code, codex, cursor, kimi, generic
+- open_questions: None for template scope — future domain/auth/API decisions open via feature checklists and Project Truth
+- technical_clarifications: Product display name remains BNPI SM until an explicit rename is accepted in Project Truth, No backend in this repo; when API work starts, set VITE_API_BASE_URL and document in Project Truth, No auth in template scope; when auth starts, choose provider via high-risk wiki-first plan, Confirm static hosting target before production deploy work, Confirm domain entity model before first domain feature wave
+- tech_stack: React 19, Vite 8, TypeScript strict, Tailwind CSS v4, React Router, i18next, Vitest, Playwright, @homedesk/wwg
+- architecture: SPA; Atomic Design under src/components; routes in src/config/routes.config.ts; app bootstrap in src/app; E2E under e2e/features; agent truth under .wwg
+
+- out_of_scope: Backend API implementation; auth product flows; database/persistence; payments; full multi-language packs beyond English foundation; production deploy pipeline (optional later)
+
+- constraints: No hardcoded UI copy in components; no magic route strings outside config; all AI tools must follow AGENTS.md and feature:new on meaningful features
+
+- testing_strategy: Vitest for unit/component; Playwright for feature E2E; test:e2e:open for live browser watch; WWG test-enforcement for close-out obligations
+<!-- WWG_GENERATED:KEY_ANSWERS:END -->
+
+## Open Questions
+
+<!-- WWG_GENERATED:OPEN_QUESTIONS:START -->
+- None for template scope — future domain/auth/API decisions open via feature checklists and Project Truth
+<!-- WWG_GENERATED:OPEN_QUESTIONS:END -->
+
+---
+
+## Timeline

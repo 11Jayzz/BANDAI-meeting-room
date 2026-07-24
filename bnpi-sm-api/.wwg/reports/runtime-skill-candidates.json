@@ -1,0 +1,981 @@
+{
+  "version": 1,
+  "generated_by": "wwg",
+  "generated_at": "2026-07-23T17:43:20.228Z",
+  "generatedAt": "2026-07-23T17:43:20.228Z",
+  "workspacePath": "C:\\Users\\CK\\Documents\\BDSM\\bnpi-sm-api",
+  "source": {
+    "command": "wwg vorter candidates",
+    "skillRegistry": "skills/registry.yaml",
+    "skillManifest": ".wwg/config/skill-manifest.yaml",
+    "contextFiles": [
+      ".wwg/workspace/current-task.md",
+      ".wwg/wiki/project-truth.md",
+      ".wwg/wiki/project-truth-summary.md"
+    ]
+  },
+  "candidateOwner": "wwg",
+  "artifactType": "runtime-skill-candidates",
+  "activation_owner": "vorter",
+  "activation_status": "candidate_only",
+  "project": {
+    "selected_profiles": [],
+    "detected_domains": [
+      "business.compliance",
+      "business.strategy",
+      "software.api",
+      "software.security",
+      "software.testing",
+      "software.web"
+    ]
+  },
+  "source_files": {
+    "skill_manifest": ".wwg/config/skill-manifest.yaml",
+    "skill_registry": "skills/registry.yaml"
+  },
+  "candidates": [
+    {
+      "id": "core.change-classifier",
+      "skillId": "core.change-classifier",
+      "name": "Change Classifier",
+      "skillName": "Change Classifier",
+      "status": "eligible",
+      "class": "core",
+      "domain": "governance",
+      "description": "Classifies natural prompts into WWG change categories and execution modes.",
+      "tags": [
+        "copied",
+        "core",
+        "eligible",
+        "enabled",
+        "governance"
+      ],
+      "recommendedUses": [
+        "Core WWG change classification behavior.",
+        "governance:natural_prompt",
+        "prompt:classify",
+        "prompt:route"
+      ],
+      "restrictions": [],
+      "requiredPermissions": [
+        "approval_area:governance",
+        "permission_sensitivity:low",
+        "trust_tier:core"
+      ],
+      "evidenceRequirements": [
+        "heading:Inputs",
+        "heading:Output Contract",
+        "heading:Preconditions",
+        "heading:Purpose",
+        "heading:References",
+        "heading:Required Checks",
+        "heading:Steps",
+        "heading:Stop Conditions",
+        "heading:Trigger"
+      ],
+      "sourceFiles": [
+        ".wwg/config/skill-manifest.yaml",
+        ".wwg/workspace/skills/change-classifier.skill.md"
+      ],
+      "state": "enabled",
+      "materialization": "copied",
+      "activation_owner": "vorter",
+      "activation_status": "candidate_only",
+      "confidence": "high",
+      "reason": "Core WWG change classification behavior.",
+      "evidence": [
+        {
+          "type": "compatibility",
+          "value": "change-classifier",
+          "strength": "explicit",
+          "reason": "Legacy copied Workspace skill file is physically present."
+        }
+      ],
+      "constraints": {
+        "disabled": false,
+        "requires_confirmation": false,
+        "permission_sensitivity": "low",
+        "trust_tier": "core",
+        "required_tools": []
+      },
+      "source": {
+        "registry": "bundled",
+        "manifest": ".wwg/config/skill-manifest.yaml",
+        "skill_file": ".wwg/workspace/skills/change-classifier.skill.md"
+      },
+      "notes": [
+        "WWG status: eligible.",
+        "Candidate-only WWG handoff metadata. Vorter owns task-specific runtime decisions."
+      ]
+    },
+    {
+      "id": "core.context-skill-maintenance",
+      "skillId": "core.context-skill-maintenance",
+      "name": "Context Skill Maintenance",
+      "skillName": "Context Skill Maintenance",
+      "status": "eligible",
+      "class": "core",
+      "domain": "governance",
+      "description": "Guides context and skill updates after meaningful WWG changes.",
+      "tags": [
+        "copied",
+        "core",
+        "eligible",
+        "enabled",
+        "governance"
+      ],
+      "recommendedUses": [
+        "Core WWG context and skill synchronization behavior.",
+        "governance:meaningful_change",
+        "prompt:context",
+        "prompt:maintenance",
+        "prompt:skill"
+      ],
+      "restrictions": [],
+      "requiredPermissions": [
+        "approval_area:governance",
+        "permission_sensitivity:low",
+        "trust_tier:core"
+      ],
+      "evidenceRequirements": [
+        "heading:Inputs",
+        "heading:Output Contract",
+        "heading:Preconditions",
+        "heading:Purpose",
+        "heading:References",
+        "heading:Required Checks",
+        "heading:Steps",
+        "heading:Stop Conditions",
+        "heading:Trigger"
+      ],
+      "sourceFiles": [
+        ".wwg/config/skill-manifest.yaml",
+        ".wwg/workspace/skills/context-skill-maintenance.skill.md"
+      ],
+      "state": "enabled",
+      "materialization": "copied",
+      "activation_owner": "vorter",
+      "activation_status": "candidate_only",
+      "confidence": "high",
+      "reason": "Core WWG context and skill synchronization behavior.",
+      "evidence": [
+        {
+          "type": "compatibility",
+          "value": "context-skill-maintenance",
+          "strength": "explicit",
+          "reason": "Legacy copied Workspace skill file is physically present."
+        }
+      ],
+      "constraints": {
+        "disabled": false,
+        "requires_confirmation": false,
+        "permission_sensitivity": "low",
+        "trust_tier": "core",
+        "required_tools": []
+      },
+      "source": {
+        "registry": "bundled",
+        "manifest": ".wwg/config/skill-manifest.yaml",
+        "skill_file": ".wwg/workspace/skills/context-skill-maintenance.skill.md"
+      },
+      "notes": [
+        "WWG status: eligible.",
+        "Candidate-only WWG handoff metadata. Vorter owns task-specific runtime decisions."
+      ]
+    },
+    {
+      "id": "core.drift-detector",
+      "skillId": "core.drift-detector",
+      "name": "Drift Detector",
+      "skillName": "Drift Detector",
+      "status": "eligible",
+      "class": "core",
+      "domain": "governance",
+      "description": "Detects drift across code, Wiki, Workspace, Governance, reports, and public surfaces.",
+      "tags": [
+        "copied",
+        "core",
+        "eligible",
+        "enabled",
+        "governance"
+      ],
+      "recommendedUses": [
+        "Core WWG drift detection behavior.",
+        "governance:truth_alignment",
+        "prompt:drift",
+        "prompt:reconcile"
+      ],
+      "restrictions": [],
+      "requiredPermissions": [
+        "approval_area:governance",
+        "permission_sensitivity:low",
+        "trust_tier:core"
+      ],
+      "evidenceRequirements": [
+        "heading:Inputs",
+        "heading:Output Contract",
+        "heading:Preconditions",
+        "heading:Purpose",
+        "heading:References",
+        "heading:Required Checks",
+        "heading:Steps",
+        "heading:Stop Conditions",
+        "heading:Trigger"
+      ],
+      "sourceFiles": [
+        ".wwg/config/skill-manifest.yaml",
+        ".wwg/workspace/skills/drift-detector.skill.md"
+      ],
+      "state": "enabled",
+      "materialization": "copied",
+      "activation_owner": "vorter",
+      "activation_status": "candidate_only",
+      "confidence": "high",
+      "reason": "Core WWG drift detection behavior.",
+      "evidence": [
+        {
+          "type": "compatibility",
+          "value": "drift-detector",
+          "strength": "explicit",
+          "reason": "Legacy copied Workspace skill file is physically present."
+        }
+      ],
+      "constraints": {
+        "disabled": false,
+        "requires_confirmation": false,
+        "permission_sensitivity": "low",
+        "trust_tier": "core",
+        "required_tools": []
+      },
+      "source": {
+        "registry": "bundled",
+        "manifest": ".wwg/config/skill-manifest.yaml",
+        "skill_file": ".wwg/workspace/skills/drift-detector.skill.md"
+      },
+      "notes": [
+        "WWG status: eligible.",
+        "Candidate-only WWG handoff metadata. Vorter owns task-specific runtime decisions."
+      ]
+    },
+    {
+      "id": "core.regression-guardrail-maintenance",
+      "skillId": "core.regression-guardrail-maintenance",
+      "name": "Regression Guardrail Maintenance",
+      "skillName": "Regression Guardrail Maintenance",
+      "status": "eligible",
+      "class": "core",
+      "domain": "governance",
+      "description": "Maintains regression guardrails after bugs, incidents, and validation gaps.",
+      "tags": [
+        "copied",
+        "core",
+        "eligible",
+        "enabled",
+        "governance"
+      ],
+      "recommendedUses": [
+        "Core WWG regression guardrail behavior.",
+        "governance:regression_guardrail",
+        "prompt:guardrail",
+        "prompt:regression"
+      ],
+      "restrictions": [],
+      "requiredPermissions": [
+        "approval_area:governance",
+        "permission_sensitivity:low",
+        "trust_tier:core"
+      ],
+      "evidenceRequirements": [
+        "heading:Inputs",
+        "heading:Output Contract",
+        "heading:Preconditions",
+        "heading:Purpose",
+        "heading:References",
+        "heading:Required Checks",
+        "heading:Steps",
+        "heading:Stop Conditions",
+        "heading:Trigger"
+      ],
+      "sourceFiles": [
+        ".wwg/config/skill-manifest.yaml",
+        ".wwg/workspace/skills/regression-guardrail-maintenance.skill.md"
+      ],
+      "state": "enabled",
+      "materialization": "copied",
+      "activation_owner": "vorter",
+      "activation_status": "candidate_only",
+      "confidence": "high",
+      "reason": "Core WWG regression guardrail behavior.",
+      "evidence": [
+        {
+          "type": "compatibility",
+          "value": "regression-guardrail-maintenance",
+          "strength": "explicit",
+          "reason": "Legacy copied Workspace skill file is physically present."
+        }
+      ],
+      "constraints": {
+        "disabled": false,
+        "requires_confirmation": false,
+        "permission_sensitivity": "low",
+        "trust_tier": "core",
+        "required_tools": []
+      },
+      "source": {
+        "registry": "bundled",
+        "manifest": ".wwg/config/skill-manifest.yaml",
+        "skill_file": ".wwg/workspace/skills/regression-guardrail-maintenance.skill.md"
+      },
+      "notes": [
+        "WWG status: eligible.",
+        "Candidate-only WWG handoff metadata. Vorter owns task-specific runtime decisions."
+      ]
+    },
+    {
+      "id": "core.task-router",
+      "skillId": "core.task-router",
+      "name": "Task Router",
+      "skillName": "Task Router",
+      "status": "eligible",
+      "class": "core",
+      "domain": "governance",
+      "description": "Routes natural prompts into WWG execution modes, artifacts, and validation expectations.",
+      "tags": [
+        "copied",
+        "core",
+        "eligible",
+        "enabled",
+        "governance"
+      ],
+      "recommendedUses": [
+        "Core WWG task routing behavior.",
+        "governance:natural_prompt",
+        "prompt:route",
+        "prompt:task"
+      ],
+      "restrictions": [],
+      "requiredPermissions": [
+        "approval_area:governance",
+        "permission_sensitivity:low",
+        "trust_tier:core"
+      ],
+      "evidenceRequirements": [
+        "heading:Inputs",
+        "heading:Output Contract",
+        "heading:Preconditions",
+        "heading:Purpose",
+        "heading:References",
+        "heading:Required Checks",
+        "heading:Steps",
+        "heading:Stop Conditions",
+        "heading:Trigger"
+      ],
+      "sourceFiles": [
+        ".wwg/config/skill-manifest.yaml",
+        ".wwg/workspace/skills/task-router.skill.md"
+      ],
+      "state": "enabled",
+      "materialization": "copied",
+      "activation_owner": "vorter",
+      "activation_status": "candidate_only",
+      "confidence": "high",
+      "reason": "Core WWG task routing behavior.",
+      "evidence": [
+        {
+          "type": "compatibility",
+          "value": "task-router",
+          "strength": "explicit",
+          "reason": "Legacy copied Workspace skill file is physically present."
+        }
+      ],
+      "constraints": {
+        "disabled": false,
+        "requires_confirmation": false,
+        "permission_sensitivity": "low",
+        "trust_tier": "core",
+        "required_tools": []
+      },
+      "source": {
+        "registry": "bundled",
+        "manifest": ".wwg/config/skill-manifest.yaml",
+        "skill_file": ".wwg/workspace/skills/task-router.skill.md"
+      },
+      "notes": [
+        "WWG status: eligible.",
+        "Candidate-only WWG handoff metadata. Vorter owns task-specific runtime decisions."
+      ]
+    },
+    {
+      "id": "business.business-brief",
+      "skillId": "business.business-brief",
+      "name": "Business Brief",
+      "skillName": "Business Brief",
+      "status": "reference-only",
+      "class": "domain",
+      "domain": "business.strategy",
+      "description": "Guides business briefs, BRDs, PRDs, one-pagers, and executive briefs with problem framing, objectives, scope, risks, recommendations, and success criteria.",
+      "tags": [
+        "business.strategy",
+        "domain",
+        "recommended",
+        "reference",
+        "reference-only"
+      ],
+      "recommendedUses": [
+        "Business, strategy, proposal, stakeholder, or requirements evidence detected.",
+        "profile:fintech",
+        "profile:internal-tool",
+        "profile:saas-app",
+        "prompt:business brief",
+        "prompt:executive brief",
+        "prompt:proposal",
+        "prompt:requirements",
+        "prompt:stakeholder",
+        "prompt:success criteria"
+      ],
+      "restrictions": [
+        "Reference-only materialization; no local skill file was copied by this handoff."
+      ],
+      "requiredPermissions": [
+        "approval_area:business",
+        "permission_sensitivity:low",
+        "trust_tier:standard"
+      ],
+      "evidenceRequirements": [
+        "heading:Inputs",
+        "heading:Output Contract",
+        "heading:Preconditions",
+        "heading:Purpose",
+        "heading:References",
+        "heading:Required Checks",
+        "heading:Steps",
+        "heading:Stop Conditions",
+        "heading:Trigger"
+      ],
+      "sourceFiles": [
+        ".wwg/config/skill-manifest.yaml",
+        "skills/domains/creative-business/business-brief.skill.md"
+      ],
+      "state": "recommended",
+      "materialization": "reference",
+      "activation_owner": "vorter",
+      "activation_status": "candidate_only",
+      "confidence": "high",
+      "reason": "Business, strategy, proposal, stakeholder, or requirements evidence detected.",
+      "evidence": [
+        {
+          "type": "file",
+          "value": "scripts/wwg-brief.mjs",
+          "strength": "strong",
+          "reason": "scripts/wwg-brief.mjs matches *brief*."
+        },
+        {
+          "type": "domain",
+          "value": "business.strategy",
+          "strength": "strong",
+          "reason": "Fintech profile or business, strategy, proposal, stakeholder, or requirements files detected."
+        }
+      ],
+      "constraints": {
+        "disabled": false,
+        "requires_confirmation": false,
+        "permission_sensitivity": "low",
+        "trust_tier": "standard",
+        "required_tools": []
+      },
+      "source": {
+        "registry": "bundled",
+        "manifest": ".wwg/config/skill-manifest.yaml",
+        "skill_file": "skills/domains/creative-business/business-brief.skill.md"
+      },
+      "notes": [
+        "WWG status: reference-only.",
+        "Candidate-only WWG handoff metadata. Vorter owns task-specific runtime decisions."
+      ]
+    },
+    {
+      "id": "core.truth-loop",
+      "skillId": "core.truth-loop",
+      "name": "Truth Loop",
+      "skillName": "Truth Loop",
+      "status": "reference-only",
+      "class": "core",
+      "domain": "governance",
+      "description": "Ensures meaningful changes reconcile code, wiki, workspace, and governance.",
+      "tags": [
+        "core",
+        "enabled",
+        "governance",
+        "reference",
+        "reference-only"
+      ],
+      "recommendedUses": [
+        "Core WWG governance behavior.",
+        "governance:meaningful_change"
+      ],
+      "restrictions": [
+        "Reference-only materialization; no local skill file was copied by this handoff."
+      ],
+      "requiredPermissions": [
+        "approval_area:governance",
+        "permission_sensitivity:low",
+        "trust_tier:core"
+      ],
+      "evidenceRequirements": [
+        "heading:Inputs",
+        "heading:Output Contract",
+        "heading:Preconditions",
+        "heading:Purpose",
+        "heading:References",
+        "heading:Required Checks",
+        "heading:Steps",
+        "heading:Stop Conditions",
+        "heading:Trigger"
+      ],
+      "sourceFiles": [
+        ".wwg/config/skill-manifest.yaml"
+      ],
+      "state": "enabled",
+      "materialization": "reference",
+      "activation_owner": "vorter",
+      "activation_status": "candidate_only",
+      "confidence": "high",
+      "reason": "Core WWG governance behavior.",
+      "evidence": [
+        {
+          "type": "governance",
+          "value": "core",
+          "strength": "explicit",
+          "reason": "Core WWG governance behavior."
+        }
+      ],
+      "constraints": {
+        "disabled": false,
+        "requires_confirmation": false,
+        "permission_sensitivity": "low",
+        "trust_tier": "core",
+        "required_tools": []
+      },
+      "source": {
+        "registry": "bundled",
+        "manifest": ".wwg/config/skill-manifest.yaml",
+        "skill_file": null
+      },
+      "notes": [
+        "WWG status: reference-only.",
+        "Candidate-only WWG handoff metadata. Vorter owns task-specific runtime decisions."
+      ]
+    },
+    {
+      "id": "public.public-surface-update",
+      "skillId": "public.public-surface-update",
+      "name": "Public Surface Update",
+      "skillName": "Public Surface Update",
+      "status": "reference-only",
+      "class": "domain",
+      "domain": "public-surface",
+      "description": "Reviews public and user-facing communication for shipped changes.",
+      "tags": [
+        "domain",
+        "public-surface",
+        "recommended",
+        "reference",
+        "reference-only"
+      ],
+      "recommendedUses": [
+        "Public or customer-facing communication evidence suggests this skill may help.",
+        "governance:public_surface",
+        "profile:saas-app",
+        "prompt:changelog",
+        "prompt:customer",
+        "prompt:public",
+        "prompt:release"
+      ],
+      "restrictions": [
+        "Reference-only materialization; no local skill file was copied by this handoff."
+      ],
+      "requiredPermissions": [
+        "approval_area:public-surface",
+        "permission_sensitivity:low",
+        "trust_tier:standard"
+      ],
+      "evidenceRequirements": [
+        "heading:Inputs",
+        "heading:Output Contract",
+        "heading:Preconditions",
+        "heading:Purpose",
+        "heading:References",
+        "heading:Required Checks",
+        "heading:Steps",
+        "heading:Stop Conditions",
+        "heading:Trigger"
+      ],
+      "sourceFiles": [
+        ".wwg/config/skill-manifest.yaml"
+      ],
+      "state": "recommended",
+      "materialization": "reference",
+      "activation_owner": "vorter",
+      "activation_status": "candidate_only",
+      "confidence": "high",
+      "reason": "Public or customer-facing communication evidence suggests this skill may help.",
+      "evidence": [
+        {
+          "type": "file",
+          "value": "README.md",
+          "strength": "strong",
+          "reason": "README.md matches README.md."
+        },
+        {
+          "type": "file",
+          "value": ".wwg/reports/README.md",
+          "strength": "strong",
+          "reason": ".wwg/reports/README.md matches README.md."
+        },
+        {
+          "type": "file",
+          "value": ".wwg/governance/README.md",
+          "strength": "strong",
+          "reason": ".wwg/governance/README.md matches README.md."
+        },
+        {
+          "type": "file",
+          "value": ".wwg/wiki/principles/README.md",
+          "strength": "strong",
+          "reason": ".wwg/wiki/principles/README.md matches README.md."
+        },
+        {
+          "type": "file",
+          "value": ".wwg/workspace/skills/README.md",
+          "strength": "strong",
+          "reason": ".wwg/workspace/skills/README.md matches README.md."
+        }
+      ],
+      "constraints": {
+        "disabled": false,
+        "requires_confirmation": false,
+        "permission_sensitivity": "low",
+        "trust_tier": "standard",
+        "required_tools": []
+      },
+      "source": {
+        "registry": "bundled",
+        "manifest": ".wwg/config/skill-manifest.yaml",
+        "skill_file": null
+      },
+      "notes": [
+        "WWG status: reference-only.",
+        "Candidate-only WWG handoff metadata. Vorter owns task-specific runtime decisions."
+      ]
+    },
+    {
+      "id": "software.bug-fix",
+      "skillId": "software.bug-fix",
+      "name": "Bug Fix",
+      "skillName": "Bug Fix",
+      "status": "reference-only",
+      "class": "domain",
+      "domain": "software.testing",
+      "description": "Guides bug, regression, incident, performance, and root-cause fixes.",
+      "tags": [
+        "domain",
+        "recommended",
+        "reference",
+        "reference-only",
+        "software.testing"
+      ],
+      "recommendedUses": [
+        "Software, testing, bug, or incident evidence suggests this skill may help.",
+        "governance:regression_required",
+        "profile:agent-webapp",
+        "profile:saas-app",
+        "prompt:bug",
+        "prompt:fix",
+        "prompt:incident",
+        "prompt:regression"
+      ],
+      "restrictions": [
+        "Reference-only materialization; no local skill file was copied by this handoff."
+      ],
+      "requiredPermissions": [
+        "approval_area:governance",
+        "permission_sensitivity:low",
+        "trust_tier:standard"
+      ],
+      "evidenceRequirements": [
+        "heading:Inputs",
+        "heading:Output Contract",
+        "heading:Preconditions",
+        "heading:Purpose",
+        "heading:References",
+        "heading:Required Checks",
+        "heading:Steps",
+        "heading:Stop Conditions",
+        "heading:Trigger"
+      ],
+      "sourceFiles": [
+        ".wwg/config/skill-manifest.yaml"
+      ],
+      "state": "recommended",
+      "materialization": "reference",
+      "activation_owner": "vorter",
+      "activation_status": "candidate_only",
+      "confidence": "high",
+      "reason": "Software, testing, bug, or incident evidence suggests this skill may help.",
+      "evidence": [
+        {
+          "type": "dependency",
+          "value": "jest",
+          "strength": "strong",
+          "reason": "package.json contains jest."
+        },
+        {
+          "type": "file",
+          "value": "package.json",
+          "strength": "strong",
+          "reason": "package.json matches package.json."
+        },
+        {
+          "type": "file",
+          "value": "tests/api.test.ts",
+          "strength": "strong",
+          "reason": "tests/api.test.ts matches **/*.test.*."
+        },
+        {
+          "type": "file",
+          "value": "tests/cache.test.ts",
+          "strength": "strong",
+          "reason": "tests/cache.test.ts matches **/*.test.*."
+        },
+        {
+          "type": "file",
+          "value": "tests/env.schema.test.ts",
+          "strength": "strong",
+          "reason": "tests/env.schema.test.ts matches **/*.test.*."
+        },
+        {
+          "type": "domain",
+          "value": "software.testing",
+          "strength": "strong",
+          "reason": "Test files or test framework dependencies detected."
+        }
+      ],
+      "constraints": {
+        "disabled": false,
+        "requires_confirmation": false,
+        "permission_sensitivity": "low",
+        "trust_tier": "standard",
+        "required_tools": []
+      },
+      "source": {
+        "registry": "bundled",
+        "manifest": ".wwg/config/skill-manifest.yaml",
+        "skill_file": null
+      },
+      "notes": [
+        "WWG status: reference-only.",
+        "Candidate-only WWG handoff metadata. Vorter owns task-specific runtime decisions."
+      ]
+    },
+    {
+      "id": "software.feature-implementation",
+      "skillId": "software.feature-implementation",
+      "name": "Feature Implementation",
+      "skillName": "Feature Implementation",
+      "status": "reference-only",
+      "class": "domain",
+      "domain": "software",
+      "description": "Guides feature implementation with truth, architecture, tests, and public-surface review.",
+      "tags": [
+        "domain",
+        "recommended",
+        "reference",
+        "reference-only",
+        "software"
+      ],
+      "recommendedUses": [
+        "Software project or implementation task evidence suggests this skill may help.",
+        "governance:meaningful_change",
+        "profile:agent-webapp",
+        "profile:saas-app",
+        "prompt:add",
+        "prompt:create",
+        "prompt:feature",
+        "prompt:implement"
+      ],
+      "restrictions": [
+        "Reference-only materialization; no local skill file was copied by this handoff."
+      ],
+      "requiredPermissions": [
+        "approval_area:governance",
+        "permission_sensitivity:low",
+        "trust_tier:standard"
+      ],
+      "evidenceRequirements": [
+        "heading:Inputs",
+        "heading:Output Contract",
+        "heading:Preconditions",
+        "heading:Purpose",
+        "heading:References",
+        "heading:Required Checks",
+        "heading:Steps",
+        "heading:Stop Conditions",
+        "heading:Trigger"
+      ],
+      "sourceFiles": [
+        ".wwg/config/skill-manifest.yaml"
+      ],
+      "state": "recommended",
+      "materialization": "reference",
+      "activation_owner": "vorter",
+      "activation_status": "candidate_only",
+      "confidence": "high",
+      "reason": "Software project or implementation task evidence suggests this skill may help.",
+      "evidence": [
+        {
+          "type": "dependency",
+          "value": "typescript",
+          "strength": "strong",
+          "reason": "package.json contains typescript."
+        },
+        {
+          "type": "file",
+          "value": "package.json",
+          "strength": "strong",
+          "reason": "package.json matches package.json."
+        }
+      ],
+      "constraints": {
+        "disabled": false,
+        "requires_confirmation": false,
+        "permission_sensitivity": "low",
+        "trust_tier": "standard",
+        "required_tools": []
+      },
+      "source": {
+        "registry": "bundled",
+        "manifest": ".wwg/config/skill-manifest.yaml",
+        "skill_file": null
+      },
+      "notes": [
+        "WWG status: reference-only.",
+        "Candidate-only WWG handoff metadata. Vorter owns task-specific runtime decisions."
+      ]
+    },
+    {
+      "id": "software.runtime-infrastructure",
+      "skillId": "software.runtime-infrastructure",
+      "name": "Runtime Infrastructure",
+      "skillName": "Runtime Infrastructure",
+      "status": "reference-only",
+      "class": "domain",
+      "domain": "operations",
+      "description": "Guides runtime, deployment, database, environment, configuration, worker, queue, cache, and infrastructure work.",
+      "tags": [
+        "domain",
+        "operations",
+        "recommended",
+        "reference",
+        "reference-only"
+      ],
+      "recommendedUses": [
+        "Runtime, deployment, or infrastructure evidence suggests this skill may help.",
+        "governance:infrastructure",
+        "profile:agent-webapp",
+        "profile:saas-app",
+        "prompt:database",
+        "prompt:deployment",
+        "prompt:infrastructure",
+        "prompt:runtime"
+      ],
+      "restrictions": [
+        "Reference-only materialization; no local skill file was copied by this handoff."
+      ],
+      "requiredPermissions": [
+        "approval_area:infrastructure",
+        "permission_sensitivity:medium",
+        "trust_tier:standard"
+      ],
+      "evidenceRequirements": [
+        "heading:Inputs",
+        "heading:Output Contract",
+        "heading:Preconditions",
+        "heading:Purpose",
+        "heading:References",
+        "heading:Required Checks",
+        "heading:Steps",
+        "heading:Stop Conditions",
+        "heading:Trigger"
+      ],
+      "sourceFiles": [
+        ".wwg/config/skill-manifest.yaml"
+      ],
+      "state": "recommended",
+      "materialization": "reference",
+      "activation_owner": "vorter",
+      "activation_status": "candidate_only",
+      "confidence": "high",
+      "reason": "Runtime, deployment, or infrastructure evidence suggests this skill may help.",
+      "evidence": [
+        {
+          "type": "file",
+          "value": "docker-compose.yml",
+          "strength": "strong",
+          "reason": "docker-compose.yml matches docker-compose.*."
+        },
+        {
+          "type": "file",
+          "value": "Dockerfile",
+          "strength": "strong",
+          "reason": "Dockerfile matches Dockerfile."
+        },
+        {
+          "type": "file",
+          "value": ".env.example",
+          "strength": "strong",
+          "reason": ".env.example matches .env.example."
+        }
+      ],
+      "constraints": {
+        "disabled": false,
+        "requires_confirmation": false,
+        "permission_sensitivity": "medium",
+        "trust_tier": "standard",
+        "required_tools": []
+      },
+      "source": {
+        "registry": "bundled",
+        "manifest": ".wwg/config/skill-manifest.yaml",
+        "skill_file": null
+      },
+      "notes": [
+        "WWG status: reference-only.",
+        "Candidate-only WWG handoff metadata. Vorter owns task-specific runtime decisions."
+      ]
+    }
+  ],
+  "warnings": [],
+  "auditTrail": [
+    {
+      "step": "read-skill-registry",
+      "status": "pass",
+      "detail": "Skill Registry metadata was read.",
+      "files": [
+        "skills/registry.yaml"
+      ]
+    },
+    {
+      "step": "read-skill-manifest",
+      "status": "pass",
+      "detail": "Skill Manifest metadata was read.",
+      "files": [
+        ".wwg/config/skill-manifest.yaml"
+      ]
+    },
+    {
+      "step": "build-candidates",
+      "status": "pass",
+      "detail": "11 candidate skill record(s) prepared."
+    }
+  ]
+}

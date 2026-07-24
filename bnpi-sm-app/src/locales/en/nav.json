@@ -1,0 +1,18 @@
+{
+  "home": "Home",
+  "mainNavigation": "Main navigation",
+  "login": "Login",
+  "logout": "Log out",
+  "calendar": "Calendar",
+  "publicCalendar": "Public Calendar",
+  "schedule": "Schedule",
+  "dashboard": "Dashboard",
+  "profile": "Profile",
+  "reports": "Reports",
+  "report": "Report",
+  "roomManagement": "Room Management",
+  "manageSection": "Manage",
+  "displaysSection": "Displays",
+  "roomsOverview": "Rooms Overview",
+  "backToHome": "Back to Home"
+}

@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+echo "AI sloppy guard..."
+node ./scripts/ai-sloppy-guard.mjs || exit 1
+
+echo "Feature workflow doctor..."
+node ./scripts/feature-doctor.mjs || exit 1
+
+echo "Running Jest tests before commit..."
+node ./node_modules/jest/bin/jest.js --runInBand --passWithNoTests=false || exit 1

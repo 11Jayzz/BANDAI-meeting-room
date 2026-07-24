@@ -1,0 +1,10 @@
+{
+  "title": "Profile",
+  "subtitle": "Your account details.",
+  "name": "Name",
+  "email": "Email",
+  "role": "Role",
+  "roleAdmin": "Admin",
+  "roleFrontDesk": "Front Desk",
+  "navLabel": "Profile"
+}

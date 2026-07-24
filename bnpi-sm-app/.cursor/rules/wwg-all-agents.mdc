@@ -1,0 +1,38 @@
+---
+description: Mandatory WWG + feature scaffold for every Cursor agent session
+alwaysApply: true
+---
+
+# Cursor / any AI — WWG is mandatory
+
+This project uses @homedesk/wwg. **You are not exempt** if you are Cursor, Claude, Codex, Copilot, or any other tool.
+
+## Session start
+
+```bash
+npm run wwg:status
+npm run wwg:brief -- cursor
+```
+
+Read `AGENTS.md`, `.wwg/reports/wwg-agent-handoff.md`, Project Truth, and Current Task before coding.
+
+## New features
+
+When the user asks to add/build/implement a feature, run **before** large implementation:
+
+```bash
+npm run feature:new -- <slug> title:FeatureName owner:cursor e2e page
+```
+
+Then fill `.wwg/workspace/features/<slug>.md` while building.
+
+## Close-out
+
+```bash
+npm run test
+npm run test:e2e
+npm run wwg:validate
+npm run wwg:brief -- cursor
+```
+
+Full rules: `AGENTS.md`, `docs/AI_WORKFLOW.md`.

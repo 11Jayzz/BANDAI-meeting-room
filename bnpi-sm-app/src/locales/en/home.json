@@ -1,0 +1,14 @@
+{
+  "eyebrow": "Bandai Namco Philippines",
+  "title": "BDSS — Meeting Room Scheduling",
+  "subtitle": "Book and manage the 3 meeting rooms and VIP room in real time — green means vacant, red means occupied.",
+  "signIn": "Sign in",
+  "viewPublicCalendar": "View Public Calendar",
+  "goToDashboard": "Go to Dashboard",
+  "featureRealtimeTitle": "Real-time room status",
+  "featureRealtimeBody": "Every room's calendar updates the moment a booking is made — no more walking over to check if a room is free.",
+  "featureRolesTitle": "Role-based access",
+  "featureRolesBody": "Admins manage rooms and reports; front desk staff handle day-to-day bookings and check-ins.",
+  "featureBiometricTitle": "Biometric-ready check-in",
+  "featureBiometricBody": "Check-in today is staff-confirmed, built on an interface ready for fingerprint or face verification hardware."
+}
