@@ -1,0 +1,334 @@
+version: 1
+generated_by: wwg
+updated_at: 2026-07-20T07:20:34.279Z
+selected_profiles: []
+detected_domains:
+  - business.compliance
+  - business.strategy
+  - software.api
+  - software.security
+  - software.testing
+  - software.web
+skills:
+  business.business-brief:
+    state: recommended
+    source: bundled
+    class: domain
+    reason: Business, strategy, proposal, stakeholder, or requirements evidence detected.
+    materialization: reference
+    path: null
+    recommended_by:
+      - domain:business.strategy
+      - file:scripts/wwg-brief.mjs
+    enabled_by: null
+    disabled_reason: null
+    last_refreshed: 2026-07-20T07:20:34.279Z
+    evidence:
+      - type: file
+        value: scripts/wwg-brief.mjs
+        strength: strong
+        reason: scripts/wwg-brief.mjs matches *brief*.
+      - type: domain
+        value: business.strategy
+        strength: strong
+        reason: Fintech profile or business, strategy, proposal, stakeholder, or requirements files
+          detected.
+  core.change-classifier:
+    state: enabled
+    source: bundled
+    class: core
+    reason: Core WWG change classification behavior.
+    materialization: copied
+    path: .wwg/workspace/skills/change-classifier.skill.md
+    recommended_by:
+      - core
+      - compatibility
+    enabled_by: wwg
+    disabled_reason: null
+    last_refreshed: 2026-07-20T07:20:34.279Z
+    evidence:
+      - type: compatibility
+        value: change-classifier
+        strength: explicit
+        reason: Legacy copied Workspace skill file is physically present.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: keep_copied
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: copied
+  core.context-skill-maintenance:
+    state: enabled
+    source: bundled
+    class: core
+    reason: Core WWG context and skill synchronization behavior.
+    materialization: copied
+    path: .wwg/workspace/skills/context-skill-maintenance.skill.md
+    recommended_by:
+      - core
+      - compatibility
+    enabled_by: wwg
+    disabled_reason: null
+    last_refreshed: 2026-07-20T07:20:34.279Z
+    evidence:
+      - type: compatibility
+        value: context-skill-maintenance
+        strength: explicit
+        reason: Legacy copied Workspace skill file is physically present.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: keep_copied
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: copied
+  core.drift-detector:
+    state: enabled
+    source: bundled
+    class: core
+    reason: Core WWG drift detection behavior.
+    materialization: copied
+    path: .wwg/workspace/skills/drift-detector.skill.md
+    recommended_by:
+      - core
+      - compatibility
+    enabled_by: wwg
+    disabled_reason: null
+    last_refreshed: 2026-07-20T07:20:34.279Z
+    evidence:
+      - type: compatibility
+        value: drift-detector
+        strength: explicit
+        reason: Legacy copied Workspace skill file is physically present.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: keep_copied
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: copied
+  core.regression-guardrail-maintenance:
+    state: enabled
+    source: bundled
+    class: core
+    reason: Core WWG regression guardrail behavior.
+    materialization: copied
+    path: .wwg/workspace/skills/regression-guardrail-maintenance.skill.md
+    recommended_by:
+      - core
+      - compatibility
+    enabled_by: wwg
+    disabled_reason: null
+    last_refreshed: 2026-07-20T07:20:34.279Z
+    evidence:
+      - type: compatibility
+        value: regression-guardrail-maintenance
+        strength: explicit
+        reason: Legacy copied Workspace skill file is physically present.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: keep_copied
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: copied
+  core.task-router:
+    state: enabled
+    source: bundled
+    class: core
+    reason: Core WWG task routing behavior.
+    materialization: copied
+    path: .wwg/workspace/skills/task-router.skill.md
+    recommended_by:
+      - core
+      - compatibility
+    enabled_by: wwg
+    disabled_reason: null
+    last_refreshed: 2026-07-20T07:20:34.279Z
+    evidence:
+      - type: compatibility
+        value: task-router
+        strength: explicit
+        reason: Legacy copied Workspace skill file is physically present.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: keep_copied
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: copied
+  core.truth-loop:
+    state: enabled
+    source: bundled
+    class: core
+    reason: Core WWG governance behavior.
+    materialization: reference
+    path: null
+    recommended_by:
+      - core
+    enabled_by: wwg
+    disabled_reason: null
+    last_refreshed: 2026-07-20T07:20:34.279Z
+    evidence:
+      - type: governance
+        value: core
+        strength: explicit
+        reason: Core WWG governance behavior.
+  public.public-surface-update:
+    state: recommended
+    source: bundled
+    class: domain
+    reason: Public or customer-facing communication evidence suggests this skill may help.
+    materialization: reference
+    path: null
+    recommended_by:
+      - file:.wwg/governance/README.md
+      - file:.wwg/reports/README.md
+      - file:.wwg/wiki/principles/README.md
+      - file:.wwg/workspace/skills/README.md
+      - file:README.md
+    enabled_by: null
+    disabled_reason: null
+    last_refreshed: 2026-07-20T07:20:34.279Z
+    evidence:
+      - type: file
+        value: README.md
+        strength: strong
+        reason: README.md matches README.md.
+      - type: file
+        value: .wwg/reports/README.md
+        strength: strong
+        reason: .wwg/reports/README.md matches README.md.
+      - type: file
+        value: .wwg/governance/README.md
+        strength: strong
+        reason: .wwg/governance/README.md matches README.md.
+      - type: file
+        value: .wwg/wiki/principles/README.md
+        strength: strong
+        reason: .wwg/wiki/principles/README.md matches README.md.
+      - type: file
+        value: .wwg/workspace/skills/README.md
+        strength: strong
+        reason: .wwg/workspace/skills/README.md matches README.md.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: future_reference_only
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: reference
+  software.bug-fix:
+    state: recommended
+    source: bundled
+    class: domain
+    reason: Software, testing, bug, or incident evidence suggests this skill may help.
+    materialization: reference
+    path: null
+    recommended_by:
+      - dependency:jest
+      - domain:software.testing
+      - file:package.json
+      - file:tests/api.test.ts
+      - file:tests/cache.test.ts
+      - file:tests/env.schema.test.ts
+    enabled_by: null
+    disabled_reason: null
+    last_refreshed: 2026-07-20T07:20:34.279Z
+    evidence:
+      - type: dependency
+        value: jest
+        strength: strong
+        reason: package.json contains jest.
+      - type: file
+        value: package.json
+        strength: strong
+        reason: package.json matches package.json.
+      - type: file
+        value: tests/api.test.ts
+        strength: strong
+        reason: tests/api.test.ts matches **/*.test.*.
+      - type: file
+        value: tests/cache.test.ts
+        strength: strong
+        reason: tests/cache.test.ts matches **/*.test.*.
+      - type: file
+        value: tests/env.schema.test.ts
+        strength: strong
+        reason: tests/env.schema.test.ts matches **/*.test.*.
+      - type: domain
+        value: software.testing
+        strength: strong
+        reason: Test files or test framework dependencies detected.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: future_reference_only
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: reference
+  software.feature-implementation:
+    state: recommended
+    source: bundled
+    class: domain
+    reason: Software project or implementation task evidence suggests this skill may help.
+    materialization: reference
+    path: null
+    recommended_by:
+      - dependency:typescript
+      - file:package.json
+    enabled_by: null
+    disabled_reason: null
+    last_refreshed: 2026-07-20T07:20:34.279Z
+    evidence:
+      - type: dependency
+        value: typescript
+        strength: strong
+        reason: package.json contains typescript.
+      - type: file
+        value: package.json
+        strength: strong
+        reason: package.json matches package.json.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: future_reference_only
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: reference
+  software.runtime-infrastructure:
+    state: recommended
+    source: bundled
+    class: domain
+    reason: Runtime, deployment, or infrastructure evidence suggests this skill may help.
+    materialization: reference
+    path: null
+    recommended_by:
+      - file:.env.example
+      - file:Dockerfile
+      - file:docker-compose.yml
+    enabled_by: null
+    disabled_reason: null
+    last_refreshed: 2026-07-20T07:20:34.279Z
+    evidence:
+      - type: file
+        value: docker-compose.yml
+        strength: strong
+        reason: docker-compose.yml matches docker-compose.*.
+      - type: file
+        value: Dockerfile
+        strength: strong
+        reason: Dockerfile matches Dockerfile.
+      - type: file
+        value: .env.example
+        strength: strong
+        reason: .env.example matches .env.example.
+    compatibility:
+      legacy_copied: true
+      copied_by_legacy_init: true
+      copied_by_legacy_refresh: true
+      migration_status: future_reference_only
+      migration_reason: Historically copied into every workspace before governed Skills existed.
+      future_default_materialization: reference
+local_skills: {}

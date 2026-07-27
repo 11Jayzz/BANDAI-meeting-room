@@ -1,0 +1,16 @@
+{
+  "appName": "Bandai Namco",
+  "appTagline": "Meeting Room Schedule",
+  "footerCopyright": "© 2026 Bandai Namco Entertainment Inc.",
+  "loading": "Loading…",
+  "errorGeneric": "Something went wrong. Please try again.",
+  "required": "Required",
+  "roleAdmin": "Administrator",
+  "roleFrontDesk": "Front Desk Staff",
+  "actions": {
+    "continue": "Continue",
+    "cancel": "Cancel",
+    "save": "Save",
+    "back": "Back"
+  }
+}

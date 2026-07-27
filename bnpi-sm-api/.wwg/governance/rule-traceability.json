@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "kind": "wwg.governance.ruleTraceability",
+  "generatedAt": "2026-07-20T07:19:27.418Z",
+  "sourceBaselineReportPath": ".wwg/reports/adoption-regression-report.md",
+  "records": [
+    {
+      "id": "trace-core-feature-workflow",
+      "truthOrBehaviorName": "Core feature workflow",
+      "sourceEvidence": [
+        "README.md: README headings or route files"
+      ],
+      "sourceType": "docs",
+      "expectedCheckType": "process checklist",
+      "existingEvidence": [],
+      "coverageStatus": "partial",
+      "confidence": "medium",
+      "relatedGapIds": [
+        "gap-uncovered-behavior-core-feature-workflow"
+      ],
+      "relatedSafeCandidateIds": [
+        "candidate-core-feature-workflow-regression"
+      ],
+      "recommendedNextAction": "Convert related report-first candidates into confirmed verification evidence before claiming coverage."
+    },
+    {
+      "id": "trace-main-entry-point-behavior",
+      "truthOrBehaviorName": "Main entry point behavior",
+      "sourceEvidence": [
+        "dist/server.js: entry point candidate",
+        "app.ts: entry point candidate",
+        "server.ts: entry point candidate"
+      ],
+      "sourceType": "code",
+      "expectedCheckType": "executable test",
+      "existingEvidence": [],
+      "coverageStatus": "partial",
+      "confidence": "high",
+      "relatedGapIds": [
+        "gap-uncovered-behavior-main-entry-point-behavior"
+      ],
+      "relatedSafeCandidateIds": [
+        "candidate-main-entry-point-behavior-regression"
+      ],
+      "recommendedNextAction": "Convert related report-first candidates into confirmed verification evidence before claiming coverage."
+    },
+    {
+      "id": "trace-runtime-build-behavior",
+      "truthOrBehaviorName": "Runtime/build behavior",
+      "sourceEvidence": [
+        "package.json: scripts"
+      ],
+      "sourceType": "scripts",
+      "expectedCheckType": "CI check",
+      "existingEvidence": [],
+      "coverageStatus": "partial",
+      "confidence": "high",
+      "relatedGapIds": [
+        "gap-uncovered-behavior-runtime-build-behavior"
+      ],
+      "relatedSafeCandidateIds": [
+        "candidate-runtime-build-behavior-regression"
+      ],
+      "recommendedNextAction": "Convert related report-first candidates into confirmed verification evidence before claiming coverage."
+    },
+    {
+      "id": "trace-data-persistence-behavior",
+      "truthOrBehaviorName": "Data persistence behavior",
+      "sourceEvidence": [
+        "ioredis: persistence indicator"
+      ],
+      "sourceType": "code",
+      "expectedCheckType": "executable test",
+      "existingEvidence": [],
+      "coverageStatus": "partial",
+      "confidence": "high",
+      "relatedGapIds": [
+        "gap-uncovered-behavior-data-persistence-behavior"
+      ],
+      "relatedSafeCandidateIds": [
+        "candidate-persistence-migration-check",
+        "candidate-data-persistence-behavior-regression"
+      ],
+      "recommendedNextAction": "Convert related report-first candidates into confirmed verification evidence before claiming coverage."
+    },
+    {
+      "id": "trace-auth-and-permission-behavior",
+      "truthOrBehaviorName": "Auth and permission behavior",
+      "sourceEvidence": [
+        "middleware/errorHandler.ts: auth/security indicator"
+      ],
+      "sourceType": "code",
+      "expectedCheckType": "executable test",
+      "existingEvidence": [],
+      "coverageStatus": "partial",
+      "confidence": "high",
+      "relatedGapIds": [
+        "gap-uncovered-behavior-auth-and-permission-behavior"
+      ],
+      "relatedSafeCandidateIds": [
+        "candidate-auth-permission-test",
+        "candidate-auth-and-permission-behavior-regression"
+      ],
+      "recommendedNextAction": "Convert related report-first candidates into confirmed verification evidence before claiming coverage."
+    },
+    {
+      "id": "trace-payment-behavior",
+      "truthOrBehaviorName": "Payment behavior",
+      "sourceEvidence": [
+        ".husky/_/post-checkout: payments/billing indicator"
+      ],
+      "sourceType": "code",
+      "expectedCheckType": "executable test",
+      "existingEvidence": [],
+      "coverageStatus": "partial",
+      "confidence": "high",
+      "relatedGapIds": [
+        "gap-uncovered-behavior-payment-behavior"
+      ],
+      "relatedSafeCandidateIds": [
+        "candidate-payment-failure-path-test"
+      ],
+      "recommendedNextAction": "Convert related report-first candidates into confirmed verification evidence before claiming coverage."
+    },
+    {
+      "id": "trace-deployment-runtime-readiness",
+      "truthOrBehaviorName": "Deployment/runtime readiness",
+      "sourceEvidence": [
+        "Dockerfile: deployment config",
+        "docker-compose.yml: deployment config"
+      ],
+      "sourceType": "config",
+      "expectedCheckType": "operational readiness check",
+      "existingEvidence": [],
+      "coverageStatus": "partial",
+      "confidence": "high",
+      "relatedGapIds": [
+        "gap-uncovered-behavior-deployment-runtime-readiness"
+      ],
+      "relatedSafeCandidateIds": [],
+      "recommendedNextAction": "Define an expected verification path for this behavior."
+    },
+    {
+      "id": "trace-configuration-and-environment-behavior",
+      "truthOrBehaviorName": "Configuration and environment behavior",
+      "sourceEvidence": [
+        "Dockerfile",
+        "docker-compose.yml",
+        "jest.config.js",
+        "package.json",
+        "tsconfig.json"
+      ],
+      "sourceType": "config",
+      "expectedCheckType": "operational readiness check",
+      "existingEvidence": [],
+      "coverageStatus": "partial",
+      "confidence": "medium",
+      "relatedGapIds": [
+        "gap-uncovered-behavior-configuration-and-environment-behavior"
+      ],
+      "relatedSafeCandidateIds": [
+        "candidate-configuration-contract-check"
+      ],
+      "recommendedNextAction": "Convert related report-first candidates into confirmed verification evidence before claiming coverage."
+    }
+  ]
+}

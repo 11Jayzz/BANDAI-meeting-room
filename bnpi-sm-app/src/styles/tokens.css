@@ -1,0 +1,82 @@
+/**
+ * Design tokens as CSS custom properties.
+ * Semantic names are mapped into Tailwind via @theme in index.css.
+ */
+:root {
+  /* Color — brand */
+  --bnpi-brand-50: #fef2f2;
+  --bnpi-brand-100: #fee2e2;
+  --bnpi-brand-200: #fecaca;
+  --bnpi-brand-300: #fca5a5;
+  --bnpi-brand-400: #f87171;
+  --bnpi-brand-500: #ef4444;
+  --bnpi-brand-600: #dc2626;
+  --bnpi-brand-700: #b91c1c;
+  --bnpi-brand-800: #991b1b;
+  --bnpi-brand-900: #7f1d1d;
+
+  /* Color — ink (sidebar/console black theme) */
+  --bnpi-ink-900: #0b0d12;
+  --bnpi-ink-800: #14171d;
+  --bnpi-ink-700: #1c2129;
+  --bnpi-ink-600: #262d38;
+  --bnpi-ink-border: #2a313c;
+  --bnpi-ink-text: #e5e7eb;
+  --bnpi-ink-text-muted: #9aa3af;
+
+  /* Color — semantic surfaces */
+  --bnpi-bg: #f8fafc;
+  --bnpi-surface: #ffffff;
+  --bnpi-surface-muted: #f1f5f9;
+  --bnpi-border: #e2e8f0;
+  --bnpi-border-strong: #cbd5e1;
+
+  /* Color — text */
+  --bnpi-text: #0f172a;
+  --bnpi-text-muted: #475569;
+  --bnpi-text-inverse: #f8fafc;
+
+  /* Color — feedback */
+  --bnpi-danger: #dc2626;
+  --bnpi-danger-muted: #fef2f2;
+  --bnpi-success: #16a34a;
+  --bnpi-warning: #d97706;
+
+  /* Typography */
+  --bnpi-font-sans: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  --bnpi-font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, monospace;
+
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+
+  /* Radius */
+  --bnpi-radius-sm: 0.25rem;
+  --bnpi-radius-md: 0.5rem;
+  --bnpi-radius-lg: 0.75rem;
+  --bnpi-radius-full: 9999px;
+
+  /* Shadow */
+  --bnpi-shadow-sm: 0 1px 2px 0 rgb(15 23 42 / 0.05);
+  --bnpi-shadow-md: 0 4px 6px -1px rgb(15 23 42 / 0.08), 0 2px 4px -2px rgb(15 23 42 / 0.06);
+  --bnpi-shadow-lg: 0 10px 15px -3px rgb(15 23 42 / 0.08), 0 4px 6px -4px rgb(15 23 42 / 0.06);
+
+  /* Layout */
+  --space-page-x: 1.5rem;
+  --space-page-y: 2rem;
+  --header-height: 3.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bnpi-bg: #0b1220;
+    --bnpi-surface: #111827;
+    --bnpi-surface-muted: #1f2937;
+    --bnpi-border: #334155;
+    --bnpi-border-strong: #475569;
+    --bnpi-text: #f1f5f9;
+    --bnpi-text-muted: #94a3b8;
+    --bnpi-text-inverse: #0f172a;
+    --bnpi-danger-muted: #450a0a;
+  }
+}

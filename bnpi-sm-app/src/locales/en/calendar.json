@@ -1,0 +1,8 @@
+{
+  "title": "Calendar",
+  "subtitle": "Room availability for the selected day — click a vacant slot to book it.",
+  "newBooking": "New booking",
+  "legendOccupied": "Occupied",
+  "legendVacant": "Vacant",
+  "navLabel": "Calendar"
+}

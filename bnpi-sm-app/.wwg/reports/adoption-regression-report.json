@@ -1,0 +1,921 @@
+{
+  "schemaVersion": 1,
+  "kind": "wwg.adoption.regressionBaseline",
+  "target": ".",
+  "generatedAt": "2026-07-20T05:46:52.644Z",
+  "mode": "infer",
+  "projectClassification": {
+    "type": "mixed",
+    "confidence": "medium",
+    "reasons": [
+      "Package metadata was detected.",
+      "Executable source files were detected.",
+      "Source folders were detected by adoption analysis.",
+      "Project structure artifacts were detected.",
+      "Multiple documentation or process files were detected."
+    ]
+  },
+  "testFrameworks": [
+    {
+      "name": "playwright",
+      "confidence": "high",
+      "evidence": [
+        "package.json: @playwright/test",
+        "package.json script test:e2e",
+        "package.json script test:e2e:ui",
+        "package.json script test:e2e:headed",
+        "package.json script test:e2e:open",
+        "package.json script test:e2e:debug",
+        "package.json script test:e2e:report",
+        "playwright.config.ts"
+      ]
+    },
+    {
+      "name": "vitest",
+      "confidence": "high",
+      "evidence": [
+        "package.json: vitest",
+        "package.json script test",
+        "package.json script test:watch"
+      ]
+    }
+  ],
+  "testCommands": [
+    {
+      "name": "lint",
+      "command": "oxlint src",
+      "source": "package.json",
+      "confidence": "medium"
+    },
+    {
+      "name": "typecheck",
+      "command": "tsc -b --pretty false",
+      "source": "package.json",
+      "confidence": "medium"
+    },
+    {
+      "name": "test",
+      "command": "vitest run",
+      "source": "package.json",
+      "confidence": "high"
+    },
+    {
+      "name": "test:watch",
+      "command": "vitest",
+      "source": "package.json",
+      "confidence": "high"
+    },
+    {
+      "name": "test:e2e",
+      "command": "playwright test",
+      "source": "package.json",
+      "confidence": "high"
+    },
+    {
+      "name": "test:e2e:ui",
+      "command": "playwright test --ui",
+      "source": "package.json",
+      "confidence": "high"
+    },
+    {
+      "name": "test:e2e:headed",
+      "command": "playwright test --headed --workers=1",
+      "source": "package.json",
+      "confidence": "high"
+    },
+    {
+      "name": "test:e2e:open",
+      "command": "playwright test --headed --workers=1",
+      "source": "package.json",
+      "confidence": "high"
+    },
+    {
+      "name": "test:e2e:debug",
+      "command": "playwright test --debug",
+      "source": "package.json",
+      "confidence": "high"
+    },
+    {
+      "name": "test:e2e:report",
+      "command": "playwright show-report",
+      "source": "package.json",
+      "confidence": "high"
+    }
+  ],
+  "existingTests": [
+    {
+      "path": "e2e/README.md",
+      "kind": "e2e",
+      "confidence": "medium"
+    },
+    {
+      "path": "e2e/features/_template/feature.spec.ts",
+      "kind": "e2e",
+      "confidence": "medium"
+    },
+    {
+      "path": "e2e/features/home/home.spec.ts",
+      "kind": "e2e",
+      "confidence": "medium"
+    },
+    {
+      "path": "e2e/features/shell/navigation.spec.ts",
+      "kind": "e2e",
+      "confidence": "medium"
+    },
+    {
+      "path": "e2e/fixtures/index.ts",
+      "kind": "e2e",
+      "confidence": "medium"
+    },
+    {
+      "path": "e2e/pages/base.page.ts",
+      "kind": "e2e",
+      "confidence": "medium"
+    },
+    {
+      "path": "e2e/pages/home.page.ts",
+      "kind": "e2e",
+      "confidence": "medium"
+    },
+    {
+      "path": "e2e/pages/index.ts",
+      "kind": "e2e",
+      "confidence": "medium"
+    },
+    {
+      "path": "e2e/support/copy.ts",
+      "kind": "e2e",
+      "confidence": "medium"
+    },
+    {
+      "path": "e2e/support/index.ts",
+      "kind": "e2e",
+      "confidence": "medium"
+    },
+    {
+      "path": "e2e/support/routes.ts",
+      "kind": "e2e",
+      "confidence": "medium"
+    },
+    {
+      "path": "e2e/support/test-ids.ts",
+      "kind": "e2e",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/atoms/Button/Button.test.tsx",
+      "kind": "unit",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/config/routes.config.test.ts",
+      "kind": "unit",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/lib/cn.test.ts",
+      "kind": "unit",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/test/setup.ts",
+      "kind": "unit",
+      "confidence": "medium"
+    }
+  ],
+  "sourceInventory": [
+    {
+      "path": "index.html",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "playwright-report/index.html",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "playwright.config.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/app/App.tsx",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/app/providers.tsx",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/app/router.tsx",
+      "kind": "api",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/atoms/Button/Button.tsx",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/atoms/Button/index.ts",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/atoms/Input/Input.tsx",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/atoms/Input/index.ts",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/atoms/Spinner/Spinner.tsx",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/atoms/Spinner/index.ts",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/atoms/Text/Text.tsx",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/atoms/Text/index.ts",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/atoms/index.ts",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/index.ts",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/molecules/FormField/FormField.tsx",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/molecules/FormField/index.ts",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/molecules/NavLinkItem/NavLinkItem.tsx",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/molecules/NavLinkItem/index.ts",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/molecules/index.ts",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/organisms/AppHeader/AppHeader.tsx",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/organisms/AppHeader/index.ts",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/organisms/PageHeader/PageHeader.tsx",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/organisms/PageHeader/index.ts",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/organisms/index.ts",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/templates/AppShellLayout/AppShellLayout.tsx",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/templates/AppShellLayout/index.ts",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/components/templates/index.ts",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/config/app.config.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/config/breakpoints.config.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/config/env.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/config/feature-flags.config.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/config/index.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/config/routes.config.ts",
+      "kind": "api",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/hooks/index.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/hooks/useMediaQuery.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/i18n/index.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/i18n/resources.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/lib/cn.ts",
+      "kind": "service",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/lib/index.ts",
+      "kind": "service",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/main.tsx",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/pages/home/HomePage.tsx",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/pages/home/index.ts",
+      "kind": "ui",
+      "confidence": "medium"
+    },
+    {
+      "path": "src/vite-env.d.ts",
+      "kind": "source",
+      "confidence": "medium"
+    },
+    {
+      "path": "vite.config.ts",
+      "kind": "source",
+      "confidence": "medium"
+    }
+  ],
+  "documentationInventory": [
+    {
+      "path": "README.md",
+      "kind": "documentation",
+      "confidence": "medium"
+    },
+    {
+      "path": "agent-meta-prompt-template-v2.md",
+      "kind": "documentation",
+      "confidence": "medium"
+    },
+    {
+      "path": "e2e/README.md",
+      "kind": "documentation",
+      "confidence": "medium"
+    }
+  ],
+  "criticalBehaviors": [
+    {
+      "name": "Core feature workflow",
+      "source": "docs",
+      "evidence": [
+        "README.md: README headings or route files"
+      ],
+      "criticality": "high",
+      "confidence": "medium"
+    },
+    {
+      "name": "Main entry point behavior",
+      "source": "code",
+      "evidence": [
+        "e2e/fixtures/index.ts: entry point candidate",
+        "e2e/pages/index.ts: entry point candidate",
+        "e2e/support/index.ts: entry point candidate",
+        "src/app/App.tsx: entry point candidate",
+        "src/components/atoms/Button/index.ts: entry point candidate",
+        "src/components/atoms/Input/index.ts: entry point candidate",
+        "src/components/atoms/Spinner/index.ts: entry point candidate",
+        "src/components/atoms/Text/index.ts: entry point candidate",
+        "src/components/atoms/index.ts: entry point candidate",
+        "src/components/index.ts: entry point candidate",
+        "src/components/molecules/FormField/index.ts: entry point candidate",
+        "src/components/molecules/NavLinkItem/index.ts: entry point candidate"
+      ],
+      "criticality": "high",
+      "confidence": "high"
+    },
+    {
+      "name": "Runtime/build behavior",
+      "source": "scripts",
+      "evidence": [
+        "package.json: scripts"
+      ],
+      "criticality": "medium",
+      "confidence": "high"
+    },
+    {
+      "name": "Data persistence behavior",
+      "source": "code",
+      "evidence": [
+        "repository scan: no database/schema/migration indicators"
+      ],
+      "criticality": "medium",
+      "confidence": "low"
+    },
+    {
+      "name": "Auth and permission behavior",
+      "source": "code",
+      "evidence": [
+        "README/source: auth/security terms detected"
+      ],
+      "criticality": "critical",
+      "confidence": "medium"
+    },
+    {
+      "name": "Payment behavior",
+      "source": "code",
+      "evidence": [
+        "repository scan: no payment/billing indicators"
+      ],
+      "criticality": "medium",
+      "confidence": "low"
+    },
+    {
+      "name": "Deployment/runtime readiness",
+      "source": "config",
+      "evidence": [
+        "repository scan: no Docker/Vercel/Netlify/GitHub Actions config detected"
+      ],
+      "criticality": "medium",
+      "confidence": "low"
+    },
+    {
+      "name": "Configuration and environment behavior",
+      "source": "config",
+      "evidence": [
+        "package.json",
+        "playwright.config.ts",
+        "tsconfig.json"
+      ],
+      "criticality": "medium",
+      "confidence": "medium"
+    }
+  ],
+  "uncoveredBehaviors": [
+    {
+      "name": "Main entry point behavior",
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "criticality": "high",
+      "confidence": "high"
+    },
+    {
+      "name": "Runtime/build behavior",
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "criticality": "medium",
+      "confidence": "high"
+    },
+    {
+      "name": "Data persistence behavior",
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "criticality": "medium",
+      "confidence": "low"
+    },
+    {
+      "name": "Auth and permission behavior",
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "criticality": "critical",
+      "confidence": "medium"
+    },
+    {
+      "name": "Payment behavior",
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "criticality": "medium",
+      "confidence": "low"
+    },
+    {
+      "name": "Deployment/runtime readiness",
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "criticality": "medium",
+      "confidence": "low"
+    },
+    {
+      "name": "Configuration and environment behavior",
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "criticality": "medium",
+      "confidence": "medium"
+    }
+  ],
+  "regressionGaps": [
+    {
+      "name": "Uncovered behavior: Main entry point behavior",
+      "severity": "high",
+      "blocking": false,
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "recommendedAction": "Map this behavior to a report-first candidate before generating or editing executable tests."
+    },
+    {
+      "name": "Uncovered behavior: Runtime/build behavior",
+      "severity": "medium",
+      "blocking": false,
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "recommendedAction": "Map this behavior to a report-first candidate before generating or editing executable tests."
+    },
+    {
+      "name": "Uncovered behavior: Data persistence behavior",
+      "severity": "medium",
+      "blocking": false,
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "recommendedAction": "Map this behavior to a report-first candidate before generating or editing executable tests."
+    },
+    {
+      "name": "Uncovered behavior: Auth and permission behavior",
+      "severity": "critical",
+      "blocking": false,
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "recommendedAction": "Map this behavior to a report-first candidate before generating or editing executable tests."
+    },
+    {
+      "name": "Uncovered behavior: Payment behavior",
+      "severity": "medium",
+      "blocking": false,
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "recommendedAction": "Map this behavior to a report-first candidate before generating or editing executable tests."
+    },
+    {
+      "name": "Uncovered behavior: Deployment/runtime readiness",
+      "severity": "medium",
+      "blocking": false,
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "recommendedAction": "Map this behavior to a report-first candidate before generating or editing executable tests."
+    },
+    {
+      "name": "Uncovered behavior: Configuration and environment behavior",
+      "severity": "medium",
+      "blocking": false,
+      "reason": "Detected tests do not obviously map to this behavior by path/name.",
+      "recommendedAction": "Map this behavior to a report-first candidate before generating or editing executable tests."
+    }
+  ],
+  "safeTestCandidates": [
+    {
+      "name": "Smoke test candidate",
+      "type": "mixed",
+      "mode": "report-first",
+      "target": ".",
+      "sourceEvidence": [
+        "index.html",
+        "playwright-report/index.html",
+        "playwright.config.ts",
+        "src/app/App.tsx",
+        "src/app/providers.tsx"
+      ],
+      "inferredBehavior": "Confirm the application or package starts/builds at a minimal baseline.",
+      "proposedCheckType": "smoke",
+      "classification": "advisory",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Identify the smallest safe smoke check before writing executable tests."
+    },
+    {
+      "name": "Auth/permission test candidate",
+      "type": "mixed",
+      "mode": "report-first",
+      "target": "auth",
+      "sourceEvidence": [
+        "README/source: auth/security terms detected"
+      ],
+      "inferredBehavior": "Confirm access control and failure paths.",
+      "proposedCheckType": "auth-permission",
+      "classification": "blocking",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Review auth boundaries before generating executable tests."
+    },
+    {
+      "name": "Payment failure-path test candidate",
+      "type": "mixed",
+      "mode": "report-first",
+      "target": "payments",
+      "sourceEvidence": [
+        "repository scan: no payment/billing indicators"
+      ],
+      "inferredBehavior": "Confirm payment safe and failure states.",
+      "proposedCheckType": "failure-path",
+      "classification": "blocking",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Keep this report-first until production/payment boundaries are confirmed."
+    },
+    {
+      "name": "Persistence/migration check candidate",
+      "type": "mixed",
+      "mode": "report-first",
+      "target": "data",
+      "sourceEvidence": [
+        "repository scan: no database/schema/migration indicators"
+      ],
+      "inferredBehavior": "Confirm stored data, migrations, and invalid data behavior.",
+      "proposedCheckType": "persistence",
+      "classification": "blocking",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Confirm data ownership before creating executable tests."
+    },
+    {
+      "name": "Configuration contract check candidate",
+      "type": "mixed",
+      "mode": "report-first",
+      "target": "config",
+      "sourceEvidence": [
+        "package.json",
+        "playwright.config.ts",
+        "tsconfig.json"
+      ],
+      "inferredBehavior": "Confirm required config files and safe defaults.",
+      "proposedCheckType": "configuration",
+      "classification": "advisory",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Convert known-safe config expectations into checks later."
+    },
+    {
+      "name": "Schema/contract test candidate",
+      "type": "mixed",
+      "mode": "report-first",
+      "target": "contracts",
+      "sourceEvidence": [
+        "index.html",
+        "playwright-report/index.html",
+        "playwright.config.ts",
+        "src/app/App.tsx",
+        "src/app/providers.tsx"
+      ],
+      "inferredBehavior": "Confirm data contracts, config contracts, or public interfaces do not drift.",
+      "proposedCheckType": "schema-contract",
+      "classification": "advisory",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Identify actual schemas/contracts before generating tests."
+    },
+    {
+      "name": "Process regression checklist candidate",
+      "type": "mixed",
+      "mode": "report-first",
+      "target": "process",
+      "sourceEvidence": [
+        "README.md",
+        "agent-meta-prompt-template-v2.md",
+        "e2e/README.md"
+      ],
+      "inferredBehavior": "Confirm documented process steps remain current.",
+      "proposedCheckType": "process-checklist",
+      "classification": "advisory",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Turn recurring process expectations into a review checklist."
+    },
+    {
+      "name": "Document consistency check candidate",
+      "type": "mixed",
+      "mode": "report-first",
+      "target": "docs",
+      "sourceEvidence": [
+        "README.md",
+        "agent-meta-prompt-template-v2.md",
+        "e2e/README.md"
+      ],
+      "inferredBehavior": "Confirm docs, policies, and handoff material do not contradict one another.",
+      "proposedCheckType": "document-consistency",
+      "classification": "advisory",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Review canonical ownership before automating doc checks."
+    },
+    {
+      "name": "Approval-flow check candidate",
+      "type": "mixed",
+      "mode": "report-first",
+      "target": "approval",
+      "sourceEvidence": [
+        "README.md",
+        "agent-meta-prompt-template-v2.md",
+        "e2e/README.md"
+      ],
+      "inferredBehavior": "Confirm sensitive changes have review and approval evidence.",
+      "proposedCheckType": "approval-flow",
+      "classification": "blocking",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Define approval evidence in governance before enforcement."
+    },
+    {
+      "name": "Handoff completeness check candidate",
+      "type": "mixed",
+      "mode": "report-first",
+      "target": "handoff",
+      "sourceEvidence": [
+        "README.md",
+        "agent-meta-prompt-template-v2.md",
+        "e2e/README.md"
+      ],
+      "inferredBehavior": "Confirm future agents have enough context to continue.",
+      "proposedCheckType": "handoff-completeness",
+      "classification": "advisory",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Use the candidate as manual review guidance first."
+    },
+    {
+      "name": "Operational readiness check candidate",
+      "type": "mixed",
+      "mode": "report-first",
+      "target": "operations",
+      "sourceEvidence": [
+        "README.md",
+        "agent-meta-prompt-template-v2.md",
+        "e2e/README.md"
+      ],
+      "inferredBehavior": "Confirm runbooks, ownership, and release readiness are reviewed.",
+      "proposedCheckType": "operational-readiness",
+      "classification": "advisory",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Keep report-first until owners confirm operational truth."
+    },
+    {
+      "name": "Main entry point behavior regression candidate",
+      "type": "mixed",
+      "mode": "report-first",
+      "target": "Main entry point behavior",
+      "sourceEvidence": [
+        "Detected tests do not obviously map to this behavior by path/name."
+      ],
+      "inferredBehavior": "Confirm main entry point behavior remains covered as the project changes.",
+      "proposedCheckType": "critical-workflow",
+      "classification": "blocking",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Map this candidate to concrete evidence before generating executable tests."
+    },
+    {
+      "name": "Runtime/build behavior regression candidate",
+      "type": "mixed",
+      "mode": "report-first",
+      "target": "Runtime/build behavior",
+      "sourceEvidence": [
+        "Detected tests do not obviously map to this behavior by path/name."
+      ],
+      "inferredBehavior": "Confirm runtime/build behavior remains covered as the project changes.",
+      "proposedCheckType": "critical-workflow",
+      "classification": "advisory",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Map this candidate to concrete evidence before generating executable tests."
+    },
+    {
+      "name": "Data persistence behavior regression candidate",
+      "type": "mixed",
+      "mode": "report-first",
+      "target": "Data persistence behavior",
+      "sourceEvidence": [
+        "Detected tests do not obviously map to this behavior by path/name."
+      ],
+      "inferredBehavior": "Confirm data persistence behavior remains covered as the project changes.",
+      "proposedCheckType": "critical-workflow",
+      "classification": "advisory",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Map this candidate to concrete evidence before generating executable tests."
+    },
+    {
+      "name": "Auth and permission behavior regression candidate",
+      "type": "mixed",
+      "mode": "report-first",
+      "target": "Auth and permission behavior",
+      "sourceEvidence": [
+        "Detected tests do not obviously map to this behavior by path/name."
+      ],
+      "inferredBehavior": "Confirm auth and permission behavior remains covered as the project changes.",
+      "proposedCheckType": "critical-workflow",
+      "classification": "blocking",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Map this candidate to concrete evidence before generating executable tests."
+    },
+    {
+      "name": "Payment behavior regression candidate",
+      "type": "mixed",
+      "mode": "report-first",
+      "target": "Payment behavior",
+      "sourceEvidence": [
+        "Detected tests do not obviously map to this behavior by path/name."
+      ],
+      "inferredBehavior": "Confirm payment behavior remains covered as the project changes.",
+      "proposedCheckType": "critical-workflow",
+      "classification": "advisory",
+      "confidence": "medium",
+      "safeToGenerateExecutableTest": false,
+      "recommendedAction": "Map this candidate to concrete evidence before generating executable tests."
+    }
+  ],
+  "verificationPaths": {
+    "technical": [
+      "Run detected command(s): lint: oxlint src; typecheck: tsc -b --pretty false; test: vitest run; test:watch: vitest; test:e2e: playwright test; test:e2e:ui: playwright test --ui; test:e2e:headed: playwright test --headed --workers=1; test:e2e:open: playwright test --headed --workers=1; test:e2e:debug: playwright test --debug; test:e2e:report: playwright show-report",
+      "Map detected tests to critical behaviors.",
+      "Prioritize critical workflows, failure paths, configuration, schema/contract, auth, persistence, and deployment checks where applicable."
+    ],
+    "nonTechnical": [
+      "Review process, policy, runbook, and handoff documents for consistency.",
+      "Define approval-flow and stakeholder review checkpoints for changes that are not software-testable.",
+      "Record checklist results in reports before treating non-technical readiness as complete."
+    ],
+    "mixed": [
+      "Pair technical test commands with process and approval checklist review.",
+      "Trace each critical behavior to either executable coverage or a manual/process evidence path.",
+      "Start with: Core feature workflow, Main entry point behavior, Runtime/build behavior, Data persistence behavior, Auth and permission behavior."
+    ]
+  },
+  "ciReadiness": {
+    "status": "partial",
+    "reasons": [
+      "Some test/check evidence exists, but readiness gaps remain."
+    ],
+    "strictBlockingReasons": [
+      "2 high/critical behavior(s) are not mapped to detected tests."
+    ]
+  },
+  "recommendedNextActions": [
+    "Review this baseline before claiming regression readiness.",
+    "Confirm critical behavior inventory with the project owner.",
+    "Treat missing tests/checks as a readiness backlog, not an adoption failure.",
+    "Choose the project test framework and command before generating executable tests.",
+    "Create manual/process regression checklists for non-technical workflows.",
+    "Use a later maintain/status/CI pass to refresh or enforce this baseline."
+  ],
+  "safetyNotes": [
+    "Adoption may complete even when regression readiness is poor.",
+    "Missing tests are a regression readiness gap, not an adoption failure.",
+    "No executable tests were generated in this pass.",
+    "Existing source tests were not modified.",
+    "All safe test candidates are report-first and require human or agent review before executable tests are created."
+  ]
+}

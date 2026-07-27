@@ -1,0 +1,79 @@
+@import 'tailwindcss';
+@import './tokens.css';
+
+@theme {
+  --color-brand-50: var(--bnpi-brand-50);
+  --color-brand-100: var(--bnpi-brand-100);
+  --color-brand-200: var(--bnpi-brand-200);
+  --color-brand-300: var(--bnpi-brand-300);
+  --color-brand-400: var(--bnpi-brand-400);
+  --color-brand-500: var(--bnpi-brand-500);
+  --color-brand-600: var(--bnpi-brand-600);
+  --color-brand-700: var(--bnpi-brand-700);
+  --color-brand-800: var(--bnpi-brand-800);
+  --color-brand-900: var(--bnpi-brand-900);
+
+  --color-bg: var(--bnpi-bg);
+  --color-surface: var(--bnpi-surface);
+  --color-surface-muted: var(--bnpi-surface-muted);
+  --color-border: var(--bnpi-border);
+  --color-border-strong: var(--bnpi-border-strong);
+  --color-text: var(--bnpi-text);
+  --color-text-muted: var(--bnpi-text-muted);
+  --color-text-inverse: var(--bnpi-text-inverse);
+  --color-danger: var(--bnpi-danger);
+  --color-danger-muted: var(--bnpi-danger-muted);
+  --color-success: var(--bnpi-success);
+  --color-warning: var(--bnpi-warning);
+
+  --color-ink-900: var(--bnpi-ink-900);
+  --color-ink-800: var(--bnpi-ink-800);
+  --color-ink-700: var(--bnpi-ink-700);
+  --color-ink-600: var(--bnpi-ink-600);
+  --color-ink-border: var(--bnpi-ink-border);
+  --color-ink-text: var(--bnpi-ink-text);
+  --color-ink-text-muted: var(--bnpi-ink-text-muted);
+
+  --font-sans: var(--bnpi-font-sans);
+  --font-mono: var(--bnpi-font-mono);
+
+  --radius-sm: var(--bnpi-radius-sm);
+  --radius-md: var(--bnpi-radius-md);
+  --radius-lg: var(--bnpi-radius-lg);
+  --radius-full: var(--bnpi-radius-full);
+
+  --shadow-sm: var(--bnpi-shadow-sm);
+  --shadow-md: var(--bnpi-shadow-md);
+  --shadow-lg: var(--bnpi-shadow-lg);
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--bnpi-font-sans);
+    background-color: var(--bnpi-bg);
+    color: var(--bnpi-text);
+    line-height: var(--leading-normal);
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--bnpi-brand-500);
+    outline-offset: 2px;
+  }
+}

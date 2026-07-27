@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "warn",
+    "suspicious": "warn"
+  },
+  "rules": {
+    "eslint/no-underscore-dangle": "off"
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    "coverage",
+    ".wwg",
+    "scripts",
+    "db/migrations",
+    "db/migrations-drizzle",
+    "types"
+  ]
+}

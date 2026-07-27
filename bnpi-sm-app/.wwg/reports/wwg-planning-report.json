@@ -1,0 +1,27 @@
+{
+  "target": "C:\\Users\\Renz\\Documents\\bnpi-sm\\bnpi-sm-app",
+  "targetDisplay": ".",
+  "command": "wwg dev plan --from intake.answers.yaml --format plain",
+  "dryRun": false,
+  "inputsRead": [
+    "intake.answers.yaml",
+    "wwg.project.yaml",
+    "wiki/02-project/project-intake.md"
+  ],
+  "filesCreated": [],
+  "filesUpdated": [],
+  "filesSkipped": [],
+  "openQuestions": [
+    "None for template scope — future domain/auth/API decisions open via feature checklists and Project Truth"
+  ],
+  "readiness": "Ready with open questions",
+  "registryUpdated": true,
+  "github": {
+    "requested": false,
+    "ghAvailable": false,
+    "ghAuthenticated": false,
+    "createdRepo": false,
+    "pushStatus": "not-requested",
+    "errors": []
+  }
+}

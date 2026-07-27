@@ -1,0 +1,15 @@
+{
+  "title": "Reports",
+  "subtitle": "Room usage and booking analytics.",
+  "utilizationTitle": "Room Utilization",
+  "last7Days": "Last 7 days",
+  "averageUtilization": "Average utilization this week",
+  "utilizationChartAriaLabel": "Room utilization percentage for each of the last 7 days",
+  "busiestRooms": "Busiest Rooms",
+  "exportCsv": "Export CSV",
+  "csvRoom": "Room",
+  "csvType": "Type",
+  "csvBookings": "Bookings",
+  "csvHoursBooked": "Hours Booked",
+  "navLabel": "Reports"
+}

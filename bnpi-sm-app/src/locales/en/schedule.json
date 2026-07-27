@@ -1,0 +1,15 @@
+{
+  "title": "Schedule",
+  "subtitle": "Manage bookings for the selected day.",
+  "newBooking": "New booking",
+  "empty": "No bookings for this day.",
+  "columnRoom": "Room",
+  "columnTitle": "Title",
+  "columnTime": "Time",
+  "columnStatus": "Status",
+  "columnActions": "Actions",
+  "checkIn": "Check in",
+  "checkedIn": "Checked in",
+  "cancel": "Cancel",
+  "navLabel": "Schedule"
+}

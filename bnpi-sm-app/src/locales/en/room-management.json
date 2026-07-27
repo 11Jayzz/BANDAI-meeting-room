@@ -1,0 +1,14 @@
+{
+  "title": "Room Management",
+  "subtitle": "The 4 bookable rooms.",
+  "crudComingSoon": "Adding, editing, and deactivating rooms is coming in a future phase — this is a read-only list for now.",
+  "columnName": "Name",
+  "columnType": "Type",
+  "columnStatus": "Status",
+  "columnCurrent": "Right now",
+  "active": "Active",
+  "inactive": "Inactive",
+  "occupied": "Occupied",
+  "vacant": "Vacant",
+  "navLabel": "Room Management"
+}
