@@ -6,7 +6,10 @@ import { AppShellLayout } from '@/components/templates/AppShellLayout';
 
 function Field({ label, value, testId }: { label: string; value: string; testId: string }) {
   return (
-    <div className="flex flex-col gap-1" data-testid={testId}>
+    <div
+      className="flex flex-col gap-1 rounded-md border border-border px-4 py-3"
+      data-testid={testId}
+    >
       <Text variant="caption" tone="muted">
         {label}
       </Text>
@@ -25,7 +28,7 @@ export function ProfilePage() {
         <PageHeader title={t('profile:title')} description={t('profile:subtitle')} />
 
         {user ? (
-          <section className="flex max-w-md flex-col gap-4 rounded-lg border border-border bg-surface p-6 shadow-sm">
+          <section className="flex max-w-md flex-col gap-3 rounded-lg border border-border bg-surface p-6 shadow-sm">
             <Field label={t('profile:name')} value={user.displayName} testId="profile-display-name" />
             <Field label={t('profile:email')} value={user.email} testId="profile-email" />
             <Field

@@ -36,8 +36,8 @@ function SidebarLink({ to, icon, label, end }: SidebarLinkProps) {
         cn(
           'flex items-center gap-3 rounded-lg border-l-2 px-3 py-2.5 text-sm font-medium transition-colors',
           isActive
-            ? 'border-brand-500 bg-ink-700 text-white'
-            : 'border-transparent text-ink-text-muted hover:bg-ink-800 hover:text-ink-text',
+            ? 'border-brand-500 bg-surface-muted text-text'
+            : 'border-transparent text-text-muted hover:bg-surface-muted hover:text-text',
         )
       }
     >
@@ -52,14 +52,14 @@ function SectionLabel({ children }: { children: ReactNode }) {
     <Text
       as="span"
       variant="caption"
-      className="mb-1 mt-4 px-3 font-semibold uppercase tracking-wide text-ink-text-muted first:mt-0"
+      className="mb-1 mt-4 px-3 font-semibold uppercase tracking-wide text-text-muted first:mt-0"
     >
       {children}
     </Text>
   );
 }
 
-/** Left-hand app chrome: brand block, black console theme, section-grouped nav, footer. */
+/** Left-hand app chrome: brand block, white theme, section-grouped nav, footer. */
 export function AppSidebar() {
   const { t } = useTranslation(['common', 'nav']);
   const { status, user } = useAuth();
@@ -68,20 +68,20 @@ export function AppSidebar() {
 
   return (
     <aside
-      className="flex h-screen w-64 shrink-0 flex-col overflow-y-auto bg-ink-900 px-4 py-6"
+      className="flex h-screen w-64 shrink-0 flex-col overflow-y-auto border-r border-border bg-surface px-4 py-6"
       data-testid="app-header"
     >
       <div className="mb-6 flex items-center gap-3 px-2" data-testid="app-brand">
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-center text-[10px] font-extrabold leading-tight text-brand-600">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border bg-white text-center text-[10px] font-extrabold leading-tight text-brand-600">
           BANDAI
           <br />
           NAMCO
         </span>
-        <span className="flex flex-col leading-tight text-white">
-          <Text as="span" variant="label" className="text-white">
+        <span className="flex flex-col leading-tight text-text">
+          <Text as="span" variant="label" className="text-text">
             {t('common:appName')}
           </Text>
-          <Text as="span" variant="caption" className="text-ink-text-muted">
+          <Text as="span" variant="caption" className="text-text-muted">
             {t('common:appTagline')}
           </Text>
         </span>
@@ -180,17 +180,17 @@ export function AppSidebar() {
         ) : null}
       </nav>
 
-      <div className="mt-4 flex flex-col gap-3 border-t border-ink-border pt-4">
+      <div className="mt-4 flex flex-col gap-3 border-t border-border pt-4">
         {isAuthed ? (
           <NavLink
             to={ROUTES.home}
-            className="flex items-center gap-2 px-2 text-sm font-medium text-ink-text-muted transition-colors hover:text-ink-text"
+            className="flex items-center gap-2 px-2 text-sm font-medium text-text-muted transition-colors hover:text-text"
           >
             <ArrowLeft className="h-4 w-4" />
             {t('nav:backToHome')}
           </NavLink>
         ) : null}
-        <Text as="span" variant="caption" className="px-2 text-ink-text-muted">
+        <Text as="span" variant="caption" className="px-2 text-text-muted">
           {t('common:footerCopyright')}
         </Text>
       </div>

@@ -7,7 +7,10 @@ import { CALENDAR_CONFIG } from '@/config/calendar.config';
 const DATE = '2030-06-15';
 
 function slotLabel() {
-  return `${String(CALENDAR_CONFIG.dayStartHour).padStart(2, '0')}:00`;
+  const hour = CALENDAR_CONFIG.dayStartHour;
+  const period = hour < 12 ? 'AM' : 'PM';
+  const displayHour = hour % 12 === 0 ? 12 : hour % 12;
+  return `${displayHour}:00 ${period}`;
 }
 
 /** Local wall-clock ISO, matching how the component builds slot boundaries. */

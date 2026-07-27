@@ -131,7 +131,7 @@ export function CalendarPage() {
             </Text>
           </span>
           <span className="inline-flex items-center gap-1.5">
-            <span className="h-3 w-3 rounded-sm bg-success/25" />
+            <span className="h-3 w-3 rounded-sm border border-border-strong" />
             <Text as="span" variant="caption" tone="muted">
               {t('calendar:legendVacant')}
             </Text>
