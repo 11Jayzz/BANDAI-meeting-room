@@ -15,6 +15,13 @@ interface Slot {
   startIso: string;
   endIso: string;
   label: string;
+  isHourStart: boolean;
+}
+
+function formatSlotLabel(hour: number, minute: number): string {
+  const period = hour < 12 ? 'AM' : 'PM';
+  const displayHour = hour % 12 === 0 ? 12 : hour % 12;
+  return `${displayHour}:${String(minute).padStart(2, '0')} ${period}`;
 }
 
 function buildSlots(date: string): Slot[] {
@@ -31,7 +38,8 @@ function buildSlots(date: string): Slot[] {
     slots.push({
       startIso: start.toISOString(),
       endIso: end.toISOString(),
-      label: `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`,
+      label: formatSlotLabel(hour, minute),
+      isHourStart: minute === 0,
     });
   }
 
@@ -52,18 +60,21 @@ export function RoomStatusCalendar({ date, rooms, onSlotClick }: RoomStatusCalen
   const slots = useMemo(() => buildSlots(date), [date]);
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-border" data-testid="room-status-calendar">
+    <div
+      className="overflow-x-auto rounded-lg border border-border bg-surface shadow-sm"
+      data-testid="room-status-calendar"
+    >
       <table className="w-full min-w-[640px] border-collapse text-sm">
         <thead>
           <tr className="border-b border-border bg-surface-muted">
-            <th className="w-20 px-3 py-2 text-left">
-              <Text as="span" variant="caption" tone="muted">
+            <th className="w-24 px-4 py-3 text-left">
+              <Text as="span" variant="caption" tone="muted" className="font-semibold uppercase tracking-wide">
                 Time
               </Text>
             </th>
             {rooms.map((room) => (
-              <th key={room.roomId} className="px-3 py-2 text-left" data-testid={`room-column-${room.roomId}`}>
-                <Text as="span" variant="label">
+              <th key={room.roomId} className="px-3 py-3 text-left" data-testid={`room-column-${room.roomId}`}>
+                <Text as="span" variant="label" className="font-semibold">
                   {room.roomName}
                 </Text>
               </th>
@@ -72,10 +83,21 @@ export function RoomStatusCalendar({ date, rooms, onSlotClick }: RoomStatusCalen
         </thead>
         <tbody>
           {slots.map((slot) => (
-            <tr key={slot.startIso} className="border-b border-border last:border-0">
-              <td className="px-3 py-1.5">
-                <Text as="span" variant="caption" tone="muted">
-                  {slot.label}
+            <tr
+              key={slot.startIso}
+              className={cn(
+                'border-b last:border-0 hover:bg-surface-muted/60 transition-colors',
+                slot.isHourStart ? 'border-border' : 'border-border/40',
+              )}
+            >
+              <td className="px-4 py-1.5">
+                <Text
+                  as="span"
+                  variant="caption"
+                  tone="muted"
+                  className={cn('tabular-nums', slot.isHourStart && 'font-semibold text-text')}
+                >
+                  {slot.isHourStart ? slot.label : ''}
                 </Text>
               </td>
               {rooms.map((room) => {
@@ -94,9 +116,9 @@ export function RoomStatusCalendar({ date, rooms, onSlotClick }: RoomStatusCalen
                       data-testid={`slot-${room.roomId}-${slot.label}`}
                       data-status={occupied ? 'occupied' : 'vacant'}
                       className={cn(
-                        'h-6 w-full rounded-sm transition-opacity',
-                        occupied ? 'bg-danger' : 'bg-success/25',
-                        interactive && 'cursor-pointer hover:bg-success/40',
+                        'h-6 w-full rounded-sm transition-colors',
+                        occupied ? 'bg-danger shadow-sm' : 'bg-transparent',
+                        interactive && 'cursor-pointer hover:bg-brand-50',
                         !interactive && !occupied && 'cursor-default',
                       )}
                       aria-label={`${room.roomName} ${slot.label} ${occupied ? 'occupied' : 'vacant'}`}
