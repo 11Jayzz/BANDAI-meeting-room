@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run local node server",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "server.js"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "node",
+        "pattern": [],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Starting local server",
+          "endsPattern": "Local server running at http://localhost:8081/"
+        }
+      }
+    },
+    {
+      "type": "npm",
+      "script": "install",
+      "group": "clean",
+      "problemMatcher": [],
+      "label": "npm: install",
+      "detail": "install dependencies from package"
+    }
+  ]
+}
