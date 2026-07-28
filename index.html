@@ -164,6 +164,7 @@
       .meeting-focus { font-size: 1.45rem; font-weight: 800; }
       .meeting-focus-time { margin-top: 4px; color: #4d515a; font-size: 1.15rem; }
       .meeting-countdown { margin-top: 10px; color: var(--state-color); font-size: 1.15rem; font-weight: 800; }
+      .meeting-attendance { margin-top: 8px; color: var(--ink); font-size: 1.08rem; font-weight: 800; }
       .meeting-meta { margin-top: 15px; color: #5e626b; line-height: 1.5; font-size: 0.98rem; }
 
       .footer {
@@ -195,7 +196,7 @@
         .people-icon { width: 110px; }
         .status-message { margin: 16px 0 12px; font-size: 1.05rem; }
         .meeting-focus { font-size: 1.2rem; }
-        .meeting-focus-time, .meeting-countdown { font-size: 1rem; }
+        .meeting-focus-time, .meeting-countdown, .meeting-attendance { font-size: 1rem; }
         .meeting-meta { margin-top: 10px; }
         .footer { margin-top: 16px; padding-top: 9px; }
       }
@@ -275,6 +276,7 @@
           <div class="meeting-focus" id="focusTitle">Design Review</div>
           <div class="meeting-focus-time" id="focusTime">10:00 AM – 11:00 AM</div>
           <div class="meeting-countdown" id="focusCountdown">Ends in 00:30:00</div>
+          <div class="meeting-attendance" id="attendanceCount">5 people in room</div>
           <div class="meeting-meta" id="focusMeta">Host: A. Tanaka<br />Attendees: 5</div>
         </div>
       </section>
@@ -333,6 +335,7 @@
         const selected = selectedMeetingIndex === null ? null : meetings[selectedMeetingIndex];
         const focus = selected || current || next;
         const countdown = document.getElementById('focusCountdown');
+        const attendance = document.getElementById('attendanceCount');
 
         document.getElementById('currentTime').textContent = now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
         document.getElementById('todayLabel').textContent = now.toLocaleDateString([], { year: 'numeric', month: 'long', day: 'numeric' });
@@ -345,6 +348,7 @@
           document.getElementById('focusTitle').textContent = selected ? `Scheduled: ${focus.title}` : (current ? focus.title : `Next: ${focus.title}`);
           document.getElementById('focusTime').textContent = `${formatTime(focus.start)} – ${formatTime(focus.end)}`;
           document.getElementById('focusMeta').innerHTML = `Host: ${focus.host}<br />Attendees: ${focus.attendees}`;
+          attendance.textContent = `${focus.attendees} ${focus.attendees === 1 ? 'person' : 'people'} in room`;
           if (current && focus === current) {
             const meetingEnd = new Date(now);
             meetingEnd.setHours(Math.floor(focus.end / 60), focus.end % 60, 0, 0);
@@ -357,6 +361,7 @@
           document.getElementById('focusTitle').textContent = 'No more meetings today';
           document.getElementById('focusTime').textContent = '';
           countdown.textContent = '';
+          attendance.textContent = '';
           document.getElementById('focusMeta').textContent = '';
         }
 
